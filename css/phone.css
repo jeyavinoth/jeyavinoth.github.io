@@ -1,0 +1,65 @@
+@media screen and (max-width: 480px) {
+
+ /* can you escape in home page */  
+  .homePage-esc {
+  font-size: 20px; 
+  width: 250px; 
+  margin-left: -125px; 
+  }
+  
+  /* make logo smaller */ 
+  #logo-toggle {
+    width: 30px;
+    height: 30px; 
+    margin-left: -15px; 
+  }
+
+  /* make logo bg smaller */ 
+  #logo-bg {
+    width: 100px; 
+    height: 60px; 
+    margin-left: -50px; 
+  }
+
+  /* make title menu smaller */ 
+  .nav {
+    height: 30px; 
+  }
+
+  /* menu arrow locaiton */ 
+  #menu-toggle {
+    margin-top: 5px; 
+  }
+
+  /* sidebar menu background full black */ 
+  #sidebar-wrapper {
+    background-color: black; 
+  }
+
+  /* sidebar blur take out */ 
+  .nav-sidebar li a { 
+    text-shadow: 0px 0px 0px #fff; 
+  }
+
+  /* adventures title in home page */
+  #title-txt-adv {
+    font-size: 20px;
+    margin-left: 60px; 
+  }
+
+  /* escape title in home page */
+  #title-txt-esc {
+    font-size: 20px; 
+    margin-right: 60px;
+  }
+
+  /* resize tilte of each page */ 
+  .page-title h1 {
+    font-size: 40px; 
+  }
+    
+    .announce-list p {
+        width: 200px; 
+        text-align: left; 
+    }
+}

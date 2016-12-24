@@ -1,0 +1,436 @@
+/********* FONTS **********/
+@font-face {
+  font-family: h2_font; 
+  /* src:url('../fonts/Action_Man.ttf'); */ 
+  /* src:url('../fonts/alpha_echo.ttf'); */
+  src:url('../fonts/alpha_echo.ttf'); 
+}
+
+@font-face {
+  font-family: page-title-font; 
+  /* src:url('../fonts/Capture_it.ttf'); */
+  /* src:url('../fonts/alpha_echo.ttf'); */ 
+
+  /* src:url('../fonts/market_fresh_bold.ttf'); */ 
+  /* src:url('../fonts/millunium_bold.ttf'); */
+
+  /* src:url('../fonts/ground_control.ttf'); */
+
+  src:url('../fonts/american_captian.ttf');
+  /* src:url('../fonts/deathe_maach.ttf'); */
+
+}
+
+/* body css */
+body { 
+  text-align: center;
+  background: black;
+}
+
+/* toggle the site */
+.toggled {
+  margin-right: -250px; 
+}
+
+/*  --------- title menu ---------- */
+.nav { 
+  background-color:rgba(0,0,0,0.6); 
+  height: 45px; 
+  position: absolute; 
+  width: 100%; 
+  z-index: 9999; 
+}
+
+/* title menu formatting */
+.titleMenu {
+  text-align: left;
+  width: 100%; 
+}
+
+/* menu-logo <a> tag */ 
+.titleMenu a {
+  position: absolute; 
+  display: inline-block;
+}
+
+/* title menu font */ 
+.titleMenu h2 { 
+  position: absolute; 
+  display: inline-block; 
+  margin-top: 0px; 
+  color: white; 
+  font-family: "page-title-font"; 
+  /* font-family: 'Helvetica', 'Arial', sans-serif; */
+  font-size: 30px; 
+  /* font-family: "topsecret"; */ 
+}
+
+.titleMenu h2::first-letter {
+  font-size: 140%;
+}
+
+/* title menu first name */ 
+#title-txt-first { 
+  right: 50%; 
+  margin-right: 100px; 
+}
+
+/* title menu last name */ 
+#title-txt-last { 
+  left: 50%; 
+  margin-left: 100px; 
+}
+
+/* menu img */ 
+#menu-toggle { 
+  left: 0; 
+  margin-top: 10px;
+  z-index: 99999; 
+
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+/* menu arrow toggled */ 
+#menu-toggle.toggled {
+  margin-left: 115px; 
+
+  -moz-transform: rotate(90deg); 
+  -ms-transform: rotate(90deg); 
+  -o-transform: rotate(90deg); 
+  -webkit-transform: rotate(90deg); 
+  transform: rotate(90deg);
+
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+/* logo-background img */ 
+#logo-bg {
+  position: absolute; 
+  left: 50%;
+  margin-left: -75px;  
+}
+
+/* logo-img */
+#logo-toggle { 
+  position: absolute; 
+  margin-left: -30px;
+  margin-top: 8px; 
+  left: 50%; 
+
+}
+
+/*---------------- side navigation bar-----------------*/
+#nav-wrapper {
+  width: 0px; 
+  height: 100%;
+  position: absolute; 
+  /* test */
+  /* display: inline-block; */ 
+  left: 0; 
+  /* top:0; */ 
+  /* top: 45px; */
+  padding: 0; 
+  text-align: left; 
+  z-index: 9999; 
+
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease; 
+}
+
+/* side bar wrapper toggles*/
+#nav-wrapper.toggled {
+  width: 250px; 
+}
+
+/* side bar navigation */ 
+#sidebar-wrapper { 
+  /* margin-top: 45px; */
+  background-color: rgba(0,0,0,0.6);
+  height: 100%; 
+
+}
+
+/* side bar settings */
+.nav-sidebar { 
+  list-style: none;
+  z-index: 9999; 
+  padding: 10px; 
+
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease; 
+
+  /* off screen */
+  margin-left: -250px; 
+  left: 0px; 
+  width: 0px; 
+}
+
+/* side bar toggle features */
+#nav-wrapper.toggled .nav-sidebar {
+  margin-left: 0px; 
+  width: 250px; 
+}
+
+/* side bar menu animations */
+
+/* blurred out */
+.nav-sidebar li a{
+  white-space: nowrap;
+  color: transparent;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 3px #fff;
+  letter-spacing: 1px;
+
+  -moz-transform: scale(0.8); 
+  -ms-transform: scale(0.8); 
+  -o-transform: scale(0.8); 
+  -webkit-transform: scale(0.8); 
+  transform: scale(0.8);
+
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+/*side bar hover*/
+.nav-sidebar:hover li a{
+  text-shadow: 0px 0px 10px #fff;
+}
+
+/*side bar hover*/
+.nav-sidebar:visited li a{
+  text-decoration: none; 
+}
+
+/* active side bar link click */ 
+.nav-sidebar:active li a { 
+  text-decoration: none; 
+}
+
+/* navigation side bar hovering */ 
+.nav-sidebar li a:hover {
+  text-shadow: none;
+  color: #fff;
+  text-decoration: none; 
+
+  /* animation settings */ 
+  -moz-transform: scale(1); 
+  -ms-transform: scale(1); 
+  -o-transform: scale(1); 
+  -webkit-transform: scale(1); 
+  transform: scale(1); 
+}
+
+/* side bar links settings */ 
+.nav-sidebar li {
+  font-size: 20px;
+  display: block;
+  line-height: 66px;
+}
+
+
+/* ----------- wrapper for all page -- used for all pages -------*/ 
+.page-wrapper { 
+  width: 100%; 
+  height: 100%;
+  left: 0; 
+  top: 0; 
+}
+
+/* page-content-wrapper */
+.page-content-wrapper { 
+  padding: 0; 
+  width: 100%; 
+  height: 100%;
+  text-align: center; 
+  background-color: rgba(0,0,0,0.8); 
+}
+
+/* page image */ 
+.page-wrapper-img {
+  position: absolute; 
+  width: 100%;
+  height: 100%; 
+  z-index: -1; 
+  left: 0; 
+}
+
+/* page tilte */ 
+.page-title {
+  color: white; 
+  padding-top: 50px; 
+  padding-bottom: 20px; 
+  width: 100%; 
+  text-align: center; 
+}
+
+/* page tilte header1 */ 
+.page-title h1 {
+  text-align: center; 
+  left: 0;
+  font-family: "page-title-font"; 
+  font-size: 80px; 
+}
+
+/* -------- EARTH SPINNING ------ */
+
+.homePage-wrapper { 
+  width: 100%; 
+  height: 100%;
+  text-align: center; 
+  background-size: 100% 100%;  
+  /* background-size: contain;  */  
+  background-repeat: no-repeat;
+  position: absolute; 
+  display: inline-block;
+  background: url(../images/galaxy.png)
+  /* z-index: -1; */ 
+}
+
+.earth {
+  position: inline-block;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  margin-top: 8%; 
+  background: #888 url(../images/earth-flat.jpg) 0 0 repeat;
+  /* background: #888 url(../images/earth-nasa.png) 0 0 repeat; */
+  border-radius: 50%;
+
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  background-size: 1200px 600px;
+
+  animation: rotate 6s linear infinite;
+  -webkit-animation: rotate 6s linear infinite;
+  -moz-animation: rotate 6s linear infinite;
+  -ms-animation: rotate 6s linear infinite;
+  -o-animation: rotate 6s linear infinite;
+
+  -webkit-transition: -webkit-transform 200ms linear;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: -moz-transform 200ms linear;
+  -moz-transform-style: preserve-3d;
+  -ms-transition: -webkit-transform 200ms linear;
+  -ms-transform-style: preserve-3d;
+  -o-transition: -o-transform 200ms linear;
+  -o-transform-style: preserve-3d;
+
+  transition: transform 200ms linear;
+  transform-style: preserve-3d;
+  box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+
+  -moz-box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+  /* -o-box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset; */
+  /* -ms-box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset; */
+
+  color: #000;
+}
+
+.earth:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+
+  -moz-box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+  -webkit-box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+  -o-box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+  -ms-box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
+
+  z-index: 2;
+}
+
+.earth:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background: radial-gradient(circle at 100px 100px, #fff, #000);
+}
+
+
+
+@keyframes rotate {
+  0% {background-position: 0 0;}
+  100% {background-position: 1200px 0;}
+}
+
+
+@-moz-keyframes rotate {
+  0% {background-position: 0 0;}
+  100% {background-position: 1200px 0;}
+}
+
+
+@-webkit-keyframes rotate {
+  0% {background-position: 0 0;}
+  100% {background-position: 1200px 0;}
+}
+
+
+@-ms-keyframes rotate {
+  0% {background-position: 0 0;}
+  100% {background-position: 1200px 0;}
+}
+
+
+@-o-keyframes rotate {
+  0% {background-position: 0 0;}
+  100% {background-position: 1200px 0;}
+}
+
+/*---------------- about page ----------------*/
+
+.aboutPage-wrapper { 
+  width: 100%; 
+  height: 100%;
+  text-align: center; 
+  background-image: url(../images/clouds.png);
+  background-size: 100% 100%;  
+  /* background-size: contain;  */  
+  background-repeat: no-repeat;
+  position: absolute; 
+  display: inline-block;
+  /* z-index: -1; */ 
+}
+
