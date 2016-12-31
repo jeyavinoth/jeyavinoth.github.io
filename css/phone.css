@@ -1,65 +1,157 @@
-@media screen and (max-width: 480px) {
 
- /* can you escape in home page */  
-  .homePage-esc {
-  font-size: 20px; 
-  width: 250px; 
-  margin-left: -125px; 
+@media only screen and (max-width: 980px) {
+
+  .main-menu li a {
+  font-size: 10px; 
+  }
+
+  .main-menu h3 {
+  font-size: 10px; 
+  }
+
+  .main-menu li a:hover {
+    font-size: 12px; 
+  }
+
+  .earth {
+     height: 400px; 
+     width: 400px; 
+     margin-left: -200px; 
+     top: 250px; 
+     background-size: 600px 400px; 
+  }
+
+  .satellite img {
+      height: 640px; 
+      width: 640px; 
+      margin-left: -320px; 
+      top: 130px; 
+  }
+
+  .myPic img {
+    width: 360px; 
+    height: 360px; 
+    top: 280px; 
+    margin-left: -180px; 
+  }
+
+  .main-menu-bg {
+    height: 100px; 
+  }
+
+  .main-menu li {
+    display: list-item; 
+    text-align: center; 
+  }
+
+  .main-menu li h3 {
+    display: none; 
   }
   
-  /* make logo smaller */ 
-  #logo-toggle {
-    width: 30px;
-    height: 30px; 
-    margin-left: -15px; 
-  }
-
-  /* make logo bg smaller */ 
-  #logo-bg {
-    width: 100px; 
-    height: 60px; 
-    margin-left: -50px; 
-  }
-
-  /* make title menu smaller */ 
-  .nav {
-    height: 30px; 
-  }
-
-  /* menu arrow locaiton */ 
-  #menu-toggle {
-    margin-top: 5px; 
-  }
-
-  /* sidebar menu background full black */ 
-  #sidebar-wrapper {
-    background-color: black; 
-  }
-
-  /* sidebar blur take out */ 
-  .nav-sidebar li a { 
-    text-shadow: 0px 0px 0px #fff; 
-  }
-
-  /* adventures title in home page */
-  #title-txt-adv {
-    font-size: 20px;
-    margin-left: 60px; 
-  }
-
-  /* escape title in home page */
-  #title-txt-esc {
+  .aboutPage-wrapper h2 {
     font-size: 20px; 
-    margin-right: 60px;
   }
 
-  /* resize tilte of each page */ 
-  .page-title h1 {
-    font-size: 40px; 
+  .workPage-wrapper h2{
+    font-size: 20px; 
+  } 
+  
+
+}
+
+@media only screen and (max-width: 1350px) {
+
+  .main-menu {
+    margin-top: 10px;
   }
-    
-    .announce-list p {
-        width: 200px; 
-        text-align: left; 
-    }
+
+  .main-menu li a {
+    font-size: 20px; 
+  }
+
+  .main-menu h3 {
+    font-size: 20px; 
+  }
+  
+  .main-menu li a:hover {
+    font-size: 22px; 
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  
+  .workPage-wrapper h2{
+    font-size: 15px; 
+  } 
+
+  .main-menu li a {
+  font-size: 15px; 
+  }
+
+  .main-menu h3 {
+  font-size: 15px; 
+  }
+
+  .main-menu li a:hover {
+    font-size: 15px; 
+  }
+
+  .earth {
+     height: 250px; 
+     width: 250px; 
+     margin-left: -125px; 
+     top: 300px; 
+     background-size: 600px 250px; 
+  }
+
+  .satellite img {
+      height: 400px; 
+      width: 400px; 
+      margin-left: -200px; 
+      top: 225px; 
+  }
+
+  .myPic img {
+    width: 225px; 
+    height: 225px; 
+    top: 320px; 
+    margin-left: -112px; 
+  }
+
+  .main-menu-bg {
+    height: 100px; 
+  }
+
+  .main-menu li {
+    display: list-item; 
+    text-align: center; 
+  }
+
+  .main-menu li h3 {
+    display: none; 
+  }
+
+  .aboutPage-wrapper h2 {
+    font-size: 15px; 
+  }
+
+  .showh3 {
+    font-size: 10px!important; 
+  }
+
+  .showh4 {
+    font-size: 9px!important; 
+  }
+  
+  .showh3_1 {
+    font-size: 10px!important; 
+  }
+
+  .showh4_1 {
+    font-size: 9px!important; 
+  }
+
+
+
 }
