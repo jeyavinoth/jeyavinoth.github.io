@@ -90,6 +90,28 @@ $(window).load(function() {
   $(".pre_loader").fadeOut('slow'); 
 });
 
+$.fn.updateList = function(direction) {
+  if (direction == -1) { 
+    var $temp = this.last();
+    $temp.insertBefore(this.first());
+  }
+  if (direction == 1) { 
+    var $temp = this.first();
+    $temp.insertAfter(this.last());
+  }
+}; 
+
+$.fn.showList = function () {
+  this.each(function () {
+    if ($(this).index() >= 5) {
+      $(this).hide();
+    }
+    else {
+      $(this).show();
+    }
+  });
+}
+
 // Document ready function 
 $(document).ready(function () {
   hideAll();
@@ -224,7 +246,22 @@ $(document).ready(function () {
   /*--- Research Page ----*/
   var slideIndex = 0; 
   var slideObjects = $("#researchPage").find(".research-content"); 
+  var tempObjects = slideObjects; 
 
+  // var slideSmallIndex = 2; 
+
+  // var slideSmall = $(".allslide li"); 
+
+
+  $(".allslide li").updateList(-1);
+  $(".allslide li").updateList(-1);
+  $(".allslide li").showList();
+
+  // $(slideSmall).each(function() {
+  //   if ($(this).index() >= 5 )
+  //     $(this).hide();
+  // });
+  
 
   slideObjects.each(function (){
     $(this).hide();
@@ -240,6 +277,9 @@ $(document).ready(function () {
      slideIndex = slideObjects.length - 1;
     } 
     slideObjects.eq(slideIndex).fadeIn();
+
+    $(".allslide li").updateList(-1);
+    $(".allslide li").showList();
   }); 
 
   $("#researchPage").find(".right-btn").click(function() {
@@ -249,7 +289,10 @@ $(document).ready(function () {
      slideIndex = 0;
     } 
     slideObjects.eq(slideIndex).fadeIn();
+    $(".allslide li").updateList(1);
+    $(".allslide li").showList();
   }); 
+
 
 
   /* --- Publications Page ----*/
