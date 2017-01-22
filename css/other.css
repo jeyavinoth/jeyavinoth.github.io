@@ -30,6 +30,7 @@
   color:var(--main-first-color); 
   margin: 0px;
   font-size: 15px; 
+  word-wrap: break-word;
 }
 
 .timeline {
@@ -362,7 +363,7 @@
   content: ""; 
   position: absolute; 
   left: 50%; 
-  height: 100px; 
+  height: 98px; 
   width: 800px; 
   margin-left: -397px; 
   background: white; 
@@ -376,7 +377,7 @@
   height: 100px; 
   width: 320px; 
   margin-left: 85px; 
-  background: white; 
+  background: black; 
   top: 403px; 
   opacity: 0.8; 
 
@@ -392,9 +393,9 @@
   position: absolute; 
   left: 50%; 
   height: 100px; 
-  width: 325px; 
+  width: 328px; 
   margin-left: -400px; 
-  background: white; 
+  background: black; 
   top: 403px; 
   opacity: 0.8; 
 
