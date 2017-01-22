@@ -293,7 +293,28 @@ $(document).ready(function () {
     $(".allslide li").showList();
   }); 
 
+  $("#left-overlay").click(function() {
+    slideObjects.eq(slideIndex).fadeOut();
+    slideIndex -= 1;
+    if(slideIndex < 0) {
+     slideIndex = slideObjects.length - 1;
+    } 
+    slideObjects.eq(slideIndex).fadeIn();
 
+    $(".allslide li").updateList(-1);
+    $(".allslide li").showList();
+  }); 
+
+  $("#right-overlay").click(function() {
+    slideObjects.eq(slideIndex).fadeOut();
+    slideIndex += 1;
+    if(slideIndex >= slideObjects.length) {
+     slideIndex = 0;
+    } 
+    slideObjects.eq(slideIndex).fadeIn();
+    $(".allslide li").updateList(1);
+    $(".allslide li").showList();
+  }); 
 
   /* --- Publications Page ----*/
   
