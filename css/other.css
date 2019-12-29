@@ -99,10 +99,6 @@
   border-color: var(--main-first-color); 
 }
 
-.timeline li {
-  /* background: var(--main-first-color); */ 
-}
-
 .timeline a { 
   text-decoration: none; 
 }
@@ -159,9 +155,6 @@
   margin-top: 20px; 
 }
 
-.timeline-body u {
-  /* color: var(--main-second-color); */ 
-}
 
 /* ------- PROJECT PAGE ------ */
 .projectPage-bg {
@@ -247,9 +240,6 @@
   text-shadow: 0px 0px 20px rgba(255,255,255,0.7); 
 }
 
-.project-show {
-  /*display: block;*/
-}
 
 .project-name h2 {
   text-align: center; 
@@ -332,7 +322,7 @@
 .img-btn {
   position: absolute; 
   width: 40px; 
-  height; 40px; 
+  height: 40px; 
   top: 425px; 
   font-size: 30px; 
   color: var(--main-second-color); 
