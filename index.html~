@@ -105,17 +105,17 @@
       <div class="right-wrapper"> 
         <ul> 
           <li><a><h2>Skills</h2></a></li>
-          <li><a><h3>Programming (Most Proficient)</h3></a></li>
-          <li><a><h4>MATLAB, Python, C/C++, Fortran, C#, Shell Script, HTML/CSS</h4></a></li>
-          <li><a><h3>Programming (Others)</h3></a></li>
-          <li><a><h4>MySQL, PHP, PASCAL, Visual Basic, Java, GrADS, CUDA C, OpenACC</h4></a></li>
+          <li><a><h3 class="showh3_1">Programming (Most Proficient)</h3></a></li>
+          <li><a><h4 class="showh4_1">MATLAB, Python, C/C++, Fortran, C#, Shell Script, HTML/CSS</h4></a></li>
+          <li><a><h3 class="showh3_1">Programming (Others)</h3 ></a></li>
+          <li><a><h4 class="showh4_1">MySQL, PHP, PASCAL, Visual Basic, Java, GrADS, CUDA C, OpenACC</h4></a></li>
 
-          <li><a><h3>Design Software</h3></a></li>
-          <li><a><h4>AutoCAD, OPNET, P-Spice, Lab View, MultiSim, Modelling Softwares</h4></a></li>
-          <li><a><h3>Applications</h3></a></li>
-          <li><a><h4>Microsoft Office (Word, Excel, Powerpoint, FrontPage & Access), Adobe Photoshop/Illustrator</h4></a></li>
-          <li><a><h3>Operating Systems</h3></a></li>
-          <li><a><h4>LINUX (Fedora, Ubuntu, Red Hat, OpenSUSE, Kali), Mac OSX, DOS</h4></a></li>
+          <li><a><h3 class="showh3_1">Design Software</h3></a></li>
+          <li><a><h4 class="showh4_1">AutoCAD, OPNET, P-Spice, Lab View, MultiSim, Modelling Softwares</h4></a></li>
+          <li><a><h3 class="showh3_1">Applications</h3></a></li>
+          <li><a><h4 class="showh4_1">Microsoft Office (Word, Excel, Powerpoint, FrontPage & Access), Adobe Photoshop/Illustrator</h4></a></li>
+          <li><a><h3 class="showh3_1">Operating Systems</h3></a></li>
+          <li><a><h4 class="showh4_1">LINUX (Fedora, Ubuntu, Red Hat, OpenSUSE, Kali), Mac OSX, DOS</h4></a></li>
 
           <li><a><h2>Personal</h2></a></li>
           <li><a><h3>Attributes</h3></a></li>
@@ -143,18 +143,19 @@
           <li><a><h4 class="showh4_1">Studying convective and startiform in the extra tropics using Nexrad, GPM and Stage-4 datasets.</h4></a></li>
           <li><a><h4 class="showh4_1">Estimating vertical velocity of convective clouds using infrared brightness temperatures from the A-Train constellation of satellites.</h4></a></li>
           <li><a><h4 class="showh4_1">Studying the use of change in cloud top microwave brightness temperatures over time to estimate weather patterns and phenomenons.</h4></a></li>
-          <li><a><h4>Calibrated and archived Defense Meteorological Satellite Program satellites using AMSU-B, MOZAIC, CRTM Models.</h4></a></li>
-          <li><a><h4>Constructed Upper Tropospheric Humidity dataset spanning across 2 decades.</h4></a></li>
-          <li><a><h4>Built and administered server/network that hosts data and processing functions for the research group.</h4></a></li>
-          <li><a><h4>Provided remote sensing perspective for Department of Transportation regarding installation of meteorological sensors on major highways in New York State.</h4></a></li>
-          <li><a><h4>Presenter at New York City College of Technology, University of Austin and University of Texas El Paso conferences.</h4></a></li>
-          
+          <li><a><h4 class="showh4_1">Calibrated and archived Defense Meteorological Satellite Program satellites using AMSU-B, MOZAIC, CRTM Models.</h4></a></li>
+          <li><a><h4 class="showh4_1">Constructed Upper Tropospheric Humidity dataset spanning across 2 decades.</h4></a></li>
+          <li><a><h4 class="showh4_1">Built and administered server/network that hosts data and processing functions for the research group.</h4></a></li>
+          <li><a><h4 class="showh4_1">Provided remote sensing perspective for Department of Transportation regarding installation of meteorological sensors on major highways in New York State.</h4></a></li>
+          <li><a><h4 class="showh4_1">Presenter at New York City College of Technology, University of Austin and University of Texas El Paso conferences.</h4></a></li>
+
           <li><a><h2>Summer Intern - JPL, NASA (06/2018 - 08/2018)</h2></a></li>
           <li><a><h3>Jet Propulsion Laboratory, NASA, Pasadena, CA</h3></a></li>
           <li><a><h4>Estimating height dependant entrainment rate using satellite observations.</h4></a></li>
           <li><a><h4>Applied a bayesian approach to constrain a single plume model with CloudSat, AIRS/AMSU and TES/MLS observations.</h4></a></li>
-
           <li><a><h4>Compared entrainment rate profiles with Global Circulation Model outputs.</h4></a></li>
+
+
           <li><a><h2>Research Associate - Columbia University (12/2015 - 01/2018)</h2></a></li>
           <li><a><h3>Lamont-Doherty Earth Observatory, Columbia University</h3></a></li>
           <li><a><h4> Rigorous testing and sensitivity analysis of a regional climate model (MAR). Comparison of MAR model with RACMO, GLASS. </h4></a></li>
@@ -407,7 +408,7 @@
             </div>
             <div class="timeline-box">
               <div class="timeline-title">
-                <a href="http://www.mdpi.com/2072-4292/8/12/1037" target="_blank"><h4>A New Operational Snow Retrieval Algorithm Applied to Historical AMSR-E Brightness Temperatures.</h4></a>
+                <a href="https://www.mdpi.com/2072-4292/8/12/1037" target="_blank"><h4>A New Operational Snow Retrieval Algorithm Applied to Historical AMSR-E Brightness Temperatures.</h4></a>
               </div>
               <div class="timeline-body">
                 <p>M. Tedesco, and <u>J. Jeyaratnam</u>: Remote Sensing (MDPI), 8, 1037</p>
@@ -425,7 +426,7 @@
             </div>
             <div class="timeline-box">
               <div class="timeline-title">
-                <a href="http://www.nature.com/articles/ncomms11723" target="_blank"><h4>Arctic cut-off high drives the poleward shift of a new Greenland melting record.</h4></a>
+                <a href="https://www.nature.com/articles/ncomms11723" target="_blank"><h4>Arctic cut-off high drives the poleward shift of a new Greenland melting record.</h4></a>
               </div>
               <div class="timeline-body">
                 <p>M. Tedesco, T. Mote, <u>J. Jeyaratnam</u>, X. Fettweis, E. Hanna, J. F. Booth, R. Datta, and K. Briggs: Nature Communications, 7, 11723</p>
@@ -444,7 +445,7 @@
             </div>
             <div class="timeline-box">
               <div class="timeline-title">
-                <a href="http://www.the-cryosphere.net/10/477/2016/" target="_blank"><h4>The darkening of the Greenland ice sheet:  trends, drivers and projections (1981 - 2100).</h4></a>
+                <a href="https://www.the-cryosphere.net/10/477/2016/" target="_blank"><h4>The darkening of the Greenland ice sheet:  trends, drivers and projections (1981 - 2100).</h4></a>
               </div>
               <div class="timeline-body">
                 <p>M. Tedesco, S. Doherty, X. Fettweis, P. Alexander, <u>J. Jeyaratnam</u>, and J. Stroeve: The Cryosphere, 10, 477-496, doi:10.5194/tc-10-477-2016</p>
@@ -465,7 +466,7 @@
                 <a href="https://ghrc.nsstc.nasa.gov/hydro/details.pl?ds=A2_DySno_NRT" target="_blank"><h4> NRT AMSR2 Daily L3 Global Snow Water Equivalent EASE-Grids</h4></a>
               </div>
               <div class="timeline-body">
-                <p>M. Tedesco, <u>J. Jeyaratnam</u>, and R. Kelly: Dataset available online from the NASA LANCE AMSR2 at the GHRC DAAC, Huntsville, Alabama, U.S.A., doi: http://dx.doi.org/10.5067/AMSR2/A2_DySno_NRT</p>
+                <p>M. Tedesco, <u>J. Jeyaratnam</u>, and R. Kelly: Dataset available online from the NASA LANCE AMSR2 at the GHRC DAAC, Huntsville, Alabama, U.S.A., doi: https://dx.doi.org/10.5067/AMSR2/A2_DySno_NRT</p>
               </div>
             </div>
           </li>
@@ -480,7 +481,7 @@
             </div>
             <div class="timeline-box">
               <div class="timeline-title">
-                <a href="http://ieeexplore.ieee.org/document/7326711/" target="_blank"><h4>An overview of the current NASA operational AMSR-E/AMSR2 snow science team activities.</h4></a>
+                <a href="https://ieeexplore.ieee.org/document/7326711/" target="_blank"><h4>An overview of the current NASA operational AMSR-E/AMSR2 snow science team activities.</h4></a>
               </div>
               <div class="timeline-body">
                 <p>M. Tedesco, M. Sartori, M. and <u>J. Jeyaratnam</u>: IEEE International Geoscience and Remote Sensing Symposium (IGARSS), pp. 4037–4040</p>
@@ -498,7 +499,7 @@
             </div>
             <div class="timeline-box">
               <div class="timeline-title">
-                <a href="http://onlinelibrary.wiley.com/doi/10.1002/2013GL058922/abstract" target="_blank"><h4>Convective vertical velocity and cloud internal vertical structure: An A-Train perspective.</h4></a>
+                <a href="https://onlinelibrary.wiley.com/doi/10.1002/2013GL058922/abstract" target="_blank"><h4>Convective vertical velocity and cloud internal vertical structure: An A-Train perspective.</h4></a>
               </div>
               <div class="timeline-body">
                 <p>Z. J. Luo, <u>J. Jeyaratnam</u>, S. Iwasaki, H. Takahashi and R. Anderson: Geophys. Res. Letts., 41, doi:10.1002/2013GL058922 </p>
