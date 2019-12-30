@@ -195,24 +195,24 @@
           <a href="https://www.linkedin.com/in/jeyavinoth-jeyaratnam-78b6674" id="linkedin" target="_blank"></a>
           <a href="https://www.instagram.com/jeya_vinoth" id="instagram" target="_blank"></a>
         </div>
+      </div>
+      <div class="right-wrapper contact-wrapper">
         <div class="office-wrapper">
-          <h2> OFFICE </h2>
+          <h2> OFFICE & EMAIL </h2>
           <h3> The City College of New York </h3>
           <h3> MR-927 </h3>
           <h3> Marshak Building </h3>
           <h3> 160 Convent Ave </h3>
           <h3> New York, NY 10031 </h3>
         </div>
-      </div>
-      <div class="right-wrapper contact-wrapper">
-        <h2> EMAIL ME </h2>
-        <form action="mailto:jjeyaratnam@ccny.cuny.edu" method="post" enctype="text/plain"> 
-          <h3>Your Name:</h3> <input type="text" name="name" size="15">
-          <h3>Your E-mail:</h3> <input type="textarea" name="email" size="15">
-          <h3>Comment:</h3> <textarea type="textarea" name="comment" rows="5" cols="15"></textarea><br/><br/><br/>
-          <input type="submit" value="Send">
-          <input type="reset" value="Reset">
-        </form>
+        <!-- <h2> EMAIL ME </h2> -->
+        <!-- <form action="mailto:jjeyaratnam@ccny.cuny.edu" method="post" enctype="text/plain">  -->
+        <!--   <h3>Your Name:</h3> <input type="text" name="name" size="15"> -->
+        <!--   <h3>Your E&#45;mail:</h3> <input type="textarea" name="email" size="15"> -->
+        <!--   <h3>Comment:</h3> <textarea type="textarea" name="comment" rows="5" cols="15"></textarea><br/><br/><br/> -->
+        <!--   <input type="submit" value="Send"> -->
+        <!--   <input type="reset" value="Reset"> -->
+        <!-- </form> -->
       </div>
     </div>
 
