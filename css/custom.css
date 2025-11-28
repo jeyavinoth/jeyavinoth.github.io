@@ -10,8 +10,10 @@
   font-display: swap;
 }
 
-/* Smooth scrolling */
-html {
+/* Reset and smooth scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 

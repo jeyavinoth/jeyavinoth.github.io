@@ -37,7 +37,7 @@
   </script>
 </head>
 
-<body class="bg-black text-primary font-body">
+<body class="bg-black text-primary font-body m-0 p-0">
   <!-- CSS-only Preloader -->
   <div id="preloader" class="fixed inset-0 z-[99999] bg-black flex items-center justify-center transition-opacity duration-500">
     <div class="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
@@ -45,7 +45,7 @@
 
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-[9999] bg-black/60 border-b-2 border-primary/50">
-    <div class="flex items-center justify-center h-12 px-4">
+    <div class="hidden md:flex items-center justify-center h-12 px-4">
       <!-- Left Menu -->
       <div class="hidden md:flex items-center space-x-2 mr-16">
         <a href="#home" data-page="home" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">HOME</a>
@@ -57,8 +57,8 @@
         <a href="#contact" data-page="contact" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">CONTACT</a>
       </div>
 
-      <!-- Logo -->
-      <div class="absolute left-1/2 -translate-x-1/2 top-0">
+      <!-- Logo (hidden on mobile, shown in mobile menu instead) -->
+      <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-0">
         <img src="images/logo_jj_4.webp" alt="JJ Logo" class="h-20 w-auto" loading="eager">
       </div>
 
@@ -73,14 +73,22 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div class="md:hidden flex flex-wrap justify-center gap-2 pb-2 px-2 bg-black/60">
-      <a href="#home" data-page="home" class="nav-link text-primary hover:text-accent text-xs font-display">HOME</a>
-      <a href="#about" data-page="about" class="nav-link text-primary hover:text-accent text-xs font-display">ABOUT</a>
-      <a href="#work" data-page="work" class="nav-link text-primary hover:text-accent text-xs font-display">WORK</a>
-      <a href="#contact" data-page="contact" class="nav-link text-primary hover:text-accent text-xs font-display">CONTACT</a>
-      <a href="#research" data-page="research" class="nav-link text-primary hover:text-accent text-xs font-display">RESEARCH</a>
-      <a href="#projects" data-page="projects" class="nav-link text-primary hover:text-accent text-xs font-display">PROJECTS</a>
-      <a href="#publications" data-page="publications" class="nav-link text-primary hover:text-accent text-xs font-display">PUBLICATIONS</a>
+    <div class="md:hidden flex items-center justify-center gap-2 py-2 px-2 bg-black/60">
+      <!-- Left 4 items -->
+      <div class="flex flex-col text-right gap-1">
+        <a href="#home" data-page="home" class="nav-link text-primary hover:text-accent text-xs font-display">HOME</a>
+        <a href="#about" data-page="about" class="nav-link text-primary hover:text-accent text-xs font-display">ABOUT</a>
+        <a href="#work" data-page="work" class="nav-link text-primary hover:text-accent text-xs font-display">WORK</a>
+        <a href="#contact" data-page="contact" class="nav-link text-primary hover:text-accent text-xs font-display">CONTACT</a>
+      </div>
+      <!-- Center logo -->
+      <img src="images/logo_jj_4.webp" alt="Logo" class="w-12 h-12 mx-2">
+      <!-- Right 3 items -->
+      <div class="flex flex-col text-left gap-1">
+        <a href="#research" data-page="research" class="nav-link text-primary hover:text-accent text-xs font-display">RESEARCH</a>
+        <a href="#projects" data-page="projects" class="nav-link text-primary hover:text-accent text-xs font-display">PROJECTS</a>
+        <a href="#publications" data-page="publications" class="nav-link text-primary hover:text-accent text-xs font-display">PUBLICATIONS</a>
+      </div>
     </div>
   </nav>
 
