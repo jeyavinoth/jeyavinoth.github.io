@@ -17,7 +17,7 @@ html {
 
 /* Earth rotation animation - GPU accelerated */
 .earth {
-  background: url('../images/earth-flat.jpg') 0 0 repeat-x;
+  background: url('../images/earth-flat.webp') 0 0 repeat-x;
   background-size: 1000px 500px;
   animation: rotate-earth 6s linear infinite;
   will-change: background-position;
