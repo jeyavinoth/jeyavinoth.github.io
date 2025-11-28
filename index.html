@@ -114,7 +114,7 @@
 
       <div class="grid md:grid-cols-2 gap-0">
         <!-- Left Column -->
-        <div class="border-r border-primary/50 pr-4 text-right">
+        <div class="md:border-r border-primary/50 md:pr-4 text-left md:text-right">
           <div class="accordion-section mb-6">
             <h2 class="text-2xl text-accent font-bold cursor-pointer hover:text-shadow-glow transition-all" data-toggle="education">Education</h2>
             <div id="education" class="accordion-content mt-2">
@@ -155,7 +155,7 @@
         </div>
 
         <!-- Right Column -->
-        <div class="border-l border-primary/50 pl-4 text-left">
+        <div class="md:border-l border-primary/50 md:pl-4 text-left">
           <div class="accordion-section mb-6">
             <h2 class="text-2xl text-accent font-bold cursor-pointer hover:text-shadow-glow transition-all" data-toggle="skills">Skills</h2>
             <div id="skills" class="accordion-content mt-2">
@@ -424,7 +424,8 @@
     <div class="relative z-10 pt-32 pb-16 px-4 max-w-5xl mx-auto">
       <h1 class="text-3xl md:text-4xl text-primary font-display text-center mb-12 animate-slide-in">PROJECTS</h1>
 
-      <div class="grid md:grid-cols-2 gap-0">
+      <!-- Desktop: Two column layout with project list on left -->
+      <div class="hidden md:grid md:grid-cols-2 gap-0">
         <!-- Project List -->
         <div class="text-right border-r border-primary/50 pr-4">
           <ul class="space-y-4">
@@ -453,6 +454,36 @@
           <div class="project-detail hidden" data-project="2">
             <h2 class="text-xl text-accent mb-4">USB Interface Board (Senior Project) (2009)</h2>
             <img src="images/senior_design.webp" alt="USB Interface Board" class="w-48 h-48 object-cover border-2 border-primary mx-auto mb-4" loading="lazy">
+            <p class="text-sm text-primary">Designed USB interface device capable of controlling actuators.</p>
+            <p class="text-sm text-primary mt-2">Scripted software patch for use with Arduino Programming Language to program PIC. Team leader of 5 holding weekly status meetings to monitor progress and resolve project obstacles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile: All projects listed vertically like Work page -->
+      <div class="md:hidden space-y-6">
+        <div class="project-item">
+          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="project0">Ad Hoc Networking (2008)</h2>
+          <div id="project0" class="mt-2 pl-4 border-l-2 border-accent/50">
+            <img src="images/ad_hoc.webp" alt="Ad Hoc Networking" class="w-32 h-32 object-cover border-2 border-primary mb-4" loading="lazy">
+            <p class="text-sm text-primary">Designed OPNET algorithm to improve quality of video transfer from one node to another via ad hoc Network, by using buffered smart nodes.</p>
+            <p class="text-sm text-primary mt-2">Created system-in-the-loop setup with multiple machines and real-life data packets to analyze bit rate, packet loss ratios and SNR.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="project1">Network Simulations (2011)</h2>
+          <div id="project1" class="mt-2 pl-4 border-l-2 border-accent/50">
+            <img src="images/network.webp" alt="Network Simulations" class="w-32 h-32 object-cover border-2 border-primary mb-4" loading="lazy">
+            <p class="text-sm text-primary">Created packet switched network in OPNET using dynamic routing protocol for specified network design.</p>
+            <p class="text-sm text-primary mt-2">Simulated VOIP scenario over ad hoc Network. Built and improved performances of video transfer over a Bluetooth Mobile ad hoc Network.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="project2">USB Interface Board (Senior Project) (2009)</h2>
+          <div id="project2" class="mt-2 pl-4 border-l-2 border-accent/50">
+            <img src="images/senior_design.webp" alt="USB Interface Board" class="w-32 h-32 object-cover border-2 border-primary mb-4" loading="lazy">
             <p class="text-sm text-primary">Designed USB interface device capable of controlling actuators.</p>
             <p class="text-sm text-primary mt-2">Scripted software patch for use with Arduino Programming Language to program PIC. Team leader of 5 holding weekly status meetings to monitor progress and resolve project obstacles.</p>
           </div>
