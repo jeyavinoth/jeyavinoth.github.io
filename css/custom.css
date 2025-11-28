@@ -6,7 +6,7 @@
 /* Custom font for display headings */
 @font-face {
   font-family: 'Capture It';
-  src: url('../fonts/Capture_it.ttf') format('truetype');
+  src: url('../fonts/Capture_it.woff2') format('woff2');
   font-display: swap;
 }
 
