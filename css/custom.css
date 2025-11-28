@@ -1,0 +1,122 @@
+/**
+ * Minimal custom CSS for special effects
+ * Used alongside Tailwind CSS
+ */
+
+/* Custom font for display headings */
+@font-face {
+  font-family: 'Capture It';
+  src: url('../fonts/Capture_it.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Earth rotation animation - GPU accelerated */
+.earth {
+  background: url('../images/earth-flat.jpg') 0 0 repeat-x;
+  background-size: 1000px 500px;
+  animation: rotate-earth 6s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes rotate-earth {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+/* Page slide-in animation */
+.animate-slide-in {
+  animation: slide-in 0.8s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text glow hover effect */
+.hover\:text-shadow-glow:hover {
+  text-shadow: 0 0 20px rgba(217, 217, 217, 0.5);
+}
+
+/* Accordion content transitions */
+.accordion-content {
+  transition: all 0.3s ease;
+}
+
+/* Work content transitions */
+.work-content {
+  transition: all 0.3s ease;
+}
+
+/* Research slide transitions */
+.research-slide {
+  transition: opacity 0.3s ease;
+}
+
+/* Project detail transitions */
+.project-detail {
+  transition: opacity 0.3s ease;
+}
+
+/* Mobile menu improvements */
+@media (max-width: 768px) {
+  .earth {
+    animation-duration: 8s; /* Slower on mobile for better performance */
+  }
+}
+
+/* Preloader fade out */
+#preloader {
+  transition: opacity 0.5s ease;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Timeline responsive adjustments */
+@media (max-width: 640px) {
+  .timeline-anchor {
+    display: none;
+  }
+}
+
+/* Better focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #4484ce;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .earth {
+    animation: none;
+    background-position: center;
+  }
+
+  .animate-slide-in {
+    animation: none;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
