@@ -3,675 +3,587 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jeyavinoth Jeyaratnam - Research Associate at The City College of New York, PhD Student at The Graduate Center, CUNY">
-  <title>Jeyavinoth Jeyaratnam | Research Associate</title>
+  <title>Jeyavinoth Jeyaratnam | Senior Data Engineer</title>
+  <meta name="description" content="Jeyavinoth Jeyaratnam — Senior Data Engineer with 10+ years turning messy external observational data (emissions, satellite, weather, sensor networks) into production pipelines and the tools research teams use every day.">
 
-  <!-- Preconnect for performance -->
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jeyavinoth Jeyaratnam | Senior Data Engineer">
+  <meta property="og:description" content="Senior Data Engineer — production data pipelines for climate &amp; emissions, plus the exploration tooling research teams live in.">
+  <meta property="og:url" content="https://jeyavinoth.github.io">
+  <meta property="og:image" content="https://jeyavinoth.github.io/images/about_2.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jeyavinoth Jeyaratnam | Senior Data Engineer">
+  <meta name="twitter:description" content="Senior Data Engineer — production data pipelines for climate &amp; emissions, plus the exploration tooling research teams live in.">
+  <meta name="twitter:image" content="https://jeyavinoth.github.io/images/about_2.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="images/logo_jj_4.webp">
+  <link rel="apple-touch-icon" href="images/logo_jj_4.webp">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts with font-display swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-
-  <!-- Minimal custom CSS -->
-  <link href="css/custom.css" rel="stylesheet">
-
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#d9d9d9',
-            accent: '#4484ce',
+            bg:        '#0b0c0e',
+            surface:   '#131619',
+            surface2:  '#181c20',
+            line:      '#262b31',
+            ink:       '#e8eaed',
+            muted:     '#9aa1a9',
+            accent:    '#2dd4bf',
+            accentsoft:'#5eead4',
           },
           fontFamily: {
-            'display': ['Capture It', 'Lato', 'sans-serif'],
-            'body': ['Lato', 'Arial', 'sans-serif'],
-          }
-        }
-      }
-    }
+            sans: ['Inter', 'system-ui', 'Arial', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+          },
+        },
+      },
+    };
   </script>
+
+  <link href="css/custom.css" rel="stylesheet">
 </head>
 
-<body class="bg-black text-primary font-body m-0 p-0">
-  <!-- CSS-only Preloader -->
-  <div id="preloader" class="fixed inset-0 z-[99999] bg-black flex items-center justify-center transition-opacity duration-500">
-    <div class="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
-  </div>
+<body class="bg-bg text-ink font-sans antialiased">
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-[9999] bg-black/60 border-b-2 border-primary/50">
-    <div class="hidden md:flex items-center justify-center h-12 px-4">
-      <!-- Left Menu -->
-      <div class="hidden md:flex items-center space-x-2 mr-16">
-        <a href="#home" data-page="home" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">HOME</a>
-        <span class="text-accent">/</span>
-        <a href="#about" data-page="about" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">ABOUT</a>
-        <span class="text-accent">/</span>
-        <a href="#work" data-page="work" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">WORK</a>
-        <span class="text-accent">/</span>
-        <a href="#contact" data-page="contact" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">CONTACT</a>
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-bg/80 backdrop-blur border-b border-line">
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between" aria-label="Primary">
+      <a href="#top" class="flex items-center gap-2.5 shrink-0 group">
+        <img src="images/logo_jj_4.webp" alt="" class="h-8 w-8" width="32" height="32">
+        <span class="font-semibold tracking-tight group-hover:text-accentsoft transition-colors">Jeyavinoth Jeyaratnam</span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-7 text-sm">
+        <a href="#experience" class="nav-link text-muted hover:text-ink transition-colors">Experience</a>
+        <a href="#projects" class="nav-link text-muted hover:text-ink transition-colors">Projects</a>
+        <a href="#skills" class="nav-link text-muted hover:text-ink transition-colors">Skills</a>
+        <a href="#research" class="nav-link text-muted hover:text-ink transition-colors">Research</a>
+        <a href="#about" class="nav-link text-muted hover:text-ink transition-colors">About</a>
+        <a href="#contact" class="nav-link text-muted hover:text-ink transition-colors">Contact</a>
+        <a href="assets/Jeyavinoth_Jeyaratnam_Resume.pdf" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1.5 rounded-md border border-accent/40 bg-accent/10 px-3 py-1.5 text-accentsoft font-medium hover:bg-accent/20 transition-colors">
+          Résumé
+        </a>
       </div>
 
-      <!-- Logo (hidden on mobile, shown in mobile menu instead) -->
-      <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-0">
-        <img src="images/logo_jj_4.webp" alt="JJ Logo" class="h-20 w-auto" loading="eager">
-      </div>
+      <!-- Mobile toggle -->
+      <button id="menu-btn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-line text-ink"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
 
-      <!-- Right Menu -->
-      <div class="hidden md:flex items-center space-x-2 ml-16">
-        <a href="#research" data-page="research" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">RESEARCH</a>
-        <span class="text-accent">/</span>
-        <a href="#projects" data-page="projects" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">PROJECTS</a>
-        <span class="text-accent">/</span>
-        <a href="#publications" data-page="publications" class="nav-link text-primary hover:text-accent text-sm md:text-lg font-display transition-all duration-300">PUBLICATIONS</a>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="md:hidden flex items-center justify-center gap-2 py-2 px-2 bg-black/60">
-      <!-- Left 4 items -->
-      <div class="flex flex-col text-right gap-1">
-        <a href="#home" data-page="home" class="nav-link text-primary hover:text-accent text-xs font-display">HOME</a>
-        <a href="#about" data-page="about" class="nav-link text-primary hover:text-accent text-xs font-display">ABOUT</a>
-        <a href="#work" data-page="work" class="nav-link text-primary hover:text-accent text-xs font-display">WORK</a>
-        <a href="#contact" data-page="contact" class="nav-link text-primary hover:text-accent text-xs font-display">CONTACT</a>
-      </div>
-      <!-- Center logo -->
-      <img src="images/logo_jj_4.webp" alt="Logo" class="w-12 h-12 mx-2">
-      <!-- Right 3 items -->
-      <div class="flex flex-col text-left gap-1">
-        <a href="#research" data-page="research" class="nav-link text-primary hover:text-accent text-xs font-display">RESEARCH</a>
-        <a href="#projects" data-page="projects" class="nav-link text-primary hover:text-accent text-xs font-display">PROJECTS</a>
-        <a href="#publications" data-page="publications" class="nav-link text-primary hover:text-accent text-xs font-display">PUBLICATIONS</a>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-line bg-bg">
+      <div class="max-w-6xl mx-auto px-5 py-3 flex flex-col text-sm">
+        <a href="#experience" class="nav-link py-2.5 text-muted hover:text-ink border-b border-line/60">Experience</a>
+        <a href="#projects" class="nav-link py-2.5 text-muted hover:text-ink border-b border-line/60">Projects</a>
+        <a href="#skills" class="nav-link py-2.5 text-muted hover:text-ink border-b border-line/60">Skills</a>
+        <a href="#research" class="nav-link py-2.5 text-muted hover:text-ink border-b border-line/60">Research</a>
+        <a href="#about" class="nav-link py-2.5 text-muted hover:text-ink border-b border-line/60">About</a>
+        <a href="#contact" class="nav-link py-2.5 text-muted hover:text-ink border-b border-line/60">Contact</a>
+        <a href="assets/Jeyavinoth_Jeyaratnam_Resume.pdf" target="_blank" rel="noopener" class="py-2.5 text-accentsoft font-medium">Download résumé →</a>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Home Page -->
-  <section id="home" class="page min-h-screen relative" style="background: url('images/galaxy.webp') center/cover no-repeat;">
-    <div class="absolute inset-0 flex flex-col items-center justify-center pt-24">
-      <!-- Rotating Earth -->
-      <div class="earth-container relative w-64 h-64 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
-        <div class="earth absolute inset-0 rounded-full shadow-[inset_-100px_0px_60px_10px_rgba(0,0,0,0.9)]"></div>
-        <!-- Profile Picture -->
-        <img src="images/about_2.webp" alt="Jeyavinoth Jeyaratnam"
-             class="absolute inset-0 m-auto w-56 h-56 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] object-contain z-10"
-             loading="eager">
-      </div>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- About Page -->
-  <section id="about" class="page min-h-screen relative hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('images/clouds.webp');"></div>
-    <div class="relative z-10 pt-32 pb-16 px-4 max-w-7xl mx-auto">
-      <h1 class="text-3xl md:text-4xl text-primary font-display text-center mb-12 animate-slide-in">General Information</h1>
+    <!-- ===================== HERO ===================== -->
+    <section id="top" class="hero-section relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="max-w-6xl mx-auto px-5 relative grid md:grid-cols-[1.5fr_1fr] gap-12 items-center">
+        <div>
+          <p class="font-mono text-xs sm:text-sm text-accent tracking-wider uppercase mb-5">Senior Data Engineer · Climate tech</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">Jeyavinoth Jeyaratnam</h1>
+          <p class="mt-6 text-lg sm:text-xl text-ink/90 max-w-2xl leading-relaxed">
+            I turn messy external observational data into production pipelines — and the exploration tools research teams use every day.
+          </p>
+          <p class="mt-4 text-base text-muted max-w-2xl leading-relaxed">
+            10+ years across emissions inventories, satellite telemetry, weather signals, and sensor networks. Most of the job is detective work: figuring out what unfamiliar data actually means before anything downstream can trust it.
+          </p>
 
-      <div class="grid md:grid-cols-2 gap-0">
-        <!-- Left Column -->
-        <div class="md:border-r border-primary/50 md:pr-4 text-left md:text-right">
-          <div class="accordion-section mb-6">
-            <h2 class="text-2xl text-accent font-bold cursor-pointer hover:text-shadow-glow transition-all" data-toggle="education">Education</h2>
-            <div id="education" class="accordion-content mt-2">
-              <h3 class="text-lg text-primary underline">Phd Student</h3>
-              <p class="text-sm text-primary/80 italic">The Graduate Center, CUNY, New York (GPA: 4.0)</p>
-              <h3 class="text-lg text-primary underline mt-2">M.E. Electrical Engineering</h3>
-              <p class="text-sm text-primary/80 italic">The City College of New York, Feb 2014 (GPA: 3.9)</p>
-              <h3 class="text-lg text-primary underline mt-2">B.E. Electrical Engineering (Summa Cum Laude)</h3>
-              <p class="text-sm text-primary/80 italic">The City College of New York, Feb 2010 (GPA: 3.8)</p>
-            </div>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="assets/Jeyavinoth_Jeyaratnam_Resume.pdf" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 font-semibold text-bg hover:bg-accentsoft transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+              View résumé
+            </a>
+            <a href="https://www.linkedin.com/in/jeyavinoth" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 rounded-md border border-line px-5 py-2.5 font-medium text-ink hover:border-accent/50 hover:text-accentsoft transition-colors">
+              LinkedIn
+            </a>
+            <a href="mailto:jeyavinoth@gmail.com"
+               class="inline-flex items-center gap-2 rounded-md border border-line px-5 py-2.5 font-medium text-ink hover:border-accent/50 hover:text-accentsoft transition-colors">
+              Email
+            </a>
           </div>
 
-          <div class="accordion-section mb-6">
-            <h2 class="text-2xl text-accent font-bold cursor-pointer hover:text-shadow-glow transition-all" data-toggle="courses">Courses</h2>
-            <div id="courses" class="accordion-content mt-2">
-              <h3 class="text-lg text-primary underline">Electrical Engineering</h3>
-              <p class="text-sm text-primary/80 italic">Switching System, Analog Communications, Local Area Networks, Engineering Economics, Electrical Labs, Wireless Communications, Computer Communication Systems, Semiconductor Material Devices, Integrated Circuits, Fiber Optic Communications, Signal Processing, Stochastic Processes</p>
-              <h3 class="text-lg text-primary underline mt-2">Earth and Atmospheric Sciences</h3>
-              <p class="text-sm text-primary/80 italic">Satellite Metreology, Statistics in Earth and Atmospheric Systems, Earth Systems, Fundamentals of Atmospheric Sciences, Dynamic Meterology, Dynamic Climate Change and Variability</p>
-            </div>
-          </div>
-
-          <div class="accordion-section mb-6">
-            <h2 class="text-2xl text-accent font-bold cursor-pointer hover:text-shadow-glow transition-all" data-toggle="honors">Honors/Awards</h2>
-            <div id="honors" class="accordion-content mt-2">
-              <h3 class="text-lg text-primary underline">Zemanksy Introductory Physics Award</h3>
-              <p class="text-sm text-primary/80 italic">The City College of New York, 2007</p>
-              <h3 class="text-lg text-primary underline mt-2">Member, Tau Beta Pi</h3>
-              <p class="text-sm text-primary/80 italic">The City College of New York, Since 2007</p>
-              <h3 class="text-lg text-primary underline mt-2">Member, Eta Kappa Nu</h3>
-              <p class="text-sm text-primary/80 italic">The City College of New York, Since 2007</p>
-              <h3 class="text-lg text-primary underline mt-2">Member, IEEE</h3>
-              <p class="text-sm text-primary/80 italic">The City College of New York, Since 2007</p>
-              <h3 class="text-lg text-primary underline mt-2">Dean's List</h3>
-              <p class="text-sm text-primary/80 italic">The City College of New York, 2006</p>
-            </div>
+          <div class="mt-9 flex flex-wrap gap-x-2.5 gap-y-2 font-mono text-xs text-muted">
+            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">pandas</span>
+            <span class="chip">Dagster</span><span class="chip">Airflow</span><span class="chip">Kubernetes</span>
+            <span class="chip">PostgreSQL</span><span class="chip">GCP</span>
           </div>
         </div>
 
-        <!-- Right Column -->
-        <div class="md:border-l border-primary/50 md:pl-4 text-left">
-          <div class="accordion-section mb-6">
-            <h2 class="text-2xl text-accent font-bold cursor-pointer hover:text-shadow-glow transition-all" data-toggle="skills">Skills</h2>
-            <div id="skills" class="accordion-content mt-2">
-              <h3 class="text-lg text-primary underline">Programming (Most Proficient)</h3>
-              <p class="text-sm text-primary/80 italic">MATLAB, Python, C/C++, Fortran, C#, Shell Script, HTML/CSS</p>
-              <h3 class="text-lg text-primary underline mt-2">Programming (Others)</h3>
-              <p class="text-sm text-primary/80 italic">MySQL, PHP, PASCAL, Visual Basic, Java, GrADS, CUDA C, OpenACC</p>
-              <h3 class="text-lg text-primary underline mt-2">Design Software</h3>
-              <p class="text-sm text-primary/80 italic">AutoCAD, OPNET, P-Spice, Lab View, MultiSim, Modelling Softwares</p>
-              <h3 class="text-lg text-primary underline mt-2">Applications</h3>
-              <p class="text-sm text-primary/80 italic">Microsoft Office (Word, Excel, Powerpoint, FrontPage & Access), Adobe Photoshop/Illustrator</p>
-              <h3 class="text-lg text-primary underline mt-2">Operating Systems</h3>
-              <p class="text-sm text-primary/80 italic">LINUX (Fedora, Ubuntu, Red Hat, OpenSUSE, Kali), Mac OSX, DOS</p>
-            </div>
-          </div>
-
-          <div class="accordion-section mb-6">
-            <h2 class="text-2xl text-accent font-bold cursor-pointer hover:text-shadow-glow transition-all" data-toggle="personal">Personal</h2>
-            <div id="personal" class="accordion-content mt-2">
-              <h3 class="text-lg text-primary underline">Attributes</h3>
-              <p class="text-sm text-primary/80 italic">Quick Learner, Leader/Team Player, Results & Knowledge driven</p>
-              <h3 class="text-lg text-primary underline mt-2">Favorite Quote</h3>
-              <p class="text-sm text-primary/80 italic">"Never, never, never give in." - Winston Churchill</p>
-              <h3 class="text-lg text-primary underline mt-2">Hobbies</h3>
-              <p class="text-sm text-primary/80 italic">Basketball, Hiking, Video Games</p>
-            </div>
+        <div class="hidden md:block justify-self-end">
+          <div class="portrait">
+            <img src="images/about_2.webp" alt="Portrait of Jeyavinoth Jeyaratnam" width="400" height="400" class="w-64 h-64 lg:w-72 lg:h-72 object-cover rounded-2xl">
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Work Page -->
-  <section id="work" class="page min-h-screen relative hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('images/work.webp');"></div>
-    <div class="relative z-10 pt-32 pb-16 px-4 max-w-5xl mx-auto">
-      <h1 class="text-3xl md:text-4xl text-primary font-display text-center mb-12 animate-slide-in">Employment History</h1>
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="section">
+      <div class="max-w-5xl mx-auto px-5">
+        <p class="kicker">01 — Experience</p>
+        <h2 class="section-title">Where I've built things</h2>
 
-      <div class="space-y-6">
-        <div class="work-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="work0">Senior Data Engineer - WattTime.org (04/2022 - Present)</h2>
-          <div id="work0" class="work-content mt-2 pl-4 border-l-2 border-accent/50">
-            <h3 class="text-lg text-primary">WattTime.org</h3>
-            <ul class="text-sm text-primary/80 italic list-disc pl-4 space-y-1">
-              <li>Architected production-scale emissions data pipeline using Python, Airflow/Dagster, GCS, and Kubernetes, processing records monthly for Climate TRACE's global inventory tracking emitting assets; reduced end-to-end runtime from 10 days to 2 days while cutting cloud compute costs</li>
-              <li>Built full-stack internal analytics platform with interactive filtering, real-time visualization, and direct database connectivity, transforming team's workflow from manual SQL queries to point-and-click exploration; reduced validation bottlenecks and enabled rapid iteration on emissions model outputs; reduced investigation time significantly</li>
-              <li>Led data ingestion and validation efforts for a global power plant inventory, ensuring data quality and consistency across multiple sources</li>
+        <div class="mt-12 space-y-5">
+
+          <!-- WattTime (bullets unchanged from prior site) -->
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3 class="role-title">Senior Data Engineer</h3>
+                <p class="role-org">WattTime</p>
+              </div>
+              <div class="role-meta">
+                <span>Apr 2022 — Present</span>
+                <span class="text-muted/70">Remote</span>
+              </div>
+            </div>
+            <ul class="role-list">
+              <li>Architected a production-scale emissions data pipeline in Python on Airflow/Dagster, GCS, and Kubernetes for Climate TRACE's global inventory of emitting assets — cutting end-to-end runtime from 10 days to 2 while reducing cloud compute cost.</li>
+              <li>Built the team's full-stack internal analytics platform — interactive filtering, real-time visualization, and direct database access — replacing hand-written SQL with point-and-click exploration and clearing validation bottlenecks so modelers could iterate on outputs fast.</li>
+              <li>Led data ingestion and validation for a global power-plant inventory, holding data quality and consistency across many disparate sources.</li>
             </ul>
-          </div>
-        </div>
+          </article>
 
-        <div class="work-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="work1">Senior Research Associate - CCNY (06/2010 - 04/2022)</h2>
-          <div id="work1" class="work-content mt-2 pl-4 border-l-2 border-accent/50">
-            <h3 class="text-lg text-primary">The City College of New York, CUNY, New York</h3>
-            <ul class="text-sm text-primary/80 italic list-disc pl-4 space-y-1">
-              <li>Studying entrainment rates and mass flux estimates from satellite observations, and comparing them to Global Circulation Models.</li>
-              <li>Studying convective and stratiform in the extra tropics using Nexrad, GPM and Stage-4 datasets.</li>
-              <li>Estimating vertical velocity of convective clouds using infrared brightness temperatures from the A-Train constellation of satellites.</li>
-              <li>Studying the use of change in cloud top microwave brightness temperatures over time to estimate weather patterns and phenomenons.</li>
-              <li>Calibrated and archived Defense Meteorological Satellite Program satellites using AMSU-B, MOZAIC, CRTM Models.</li>
-              <li>Constructed Upper Tropospheric Humidity dataset spanning across 2 decades.</li>
-              <li>Built and administered server/network that hosts data and processing functions for the research group.</li>
-              <li>Provided remote sensing perspective for Department of Transportation regarding installation of meteorological sensors on major highways in New York State.</li>
-              <li>Presenter at New York City College of Technology, University of Austin and University of Texas El Paso conferences.</li>
+          <!-- CCNY -->
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3 class="role-title">Senior Research Associate / PhD Candidate</h3>
+                <p class="role-org">The City College of New York</p>
+              </div>
+              <div class="role-meta">
+                <span>Sept 2018 — Apr 2022</span>
+                <span class="text-muted/70">New York, NY</span>
+              </div>
+            </div>
+            <ul class="role-list">
+              <li>Reconciled two decades of inconsistent satellite humidity observations into a continuous climate data record by cross-validating three independent calibration methods against aircraft ground-truth profiles.</li>
+              <li>Built a bi-level optimization to place a statewide network of roadside weather sensors, weighing storm severity and inter-storm variability against per-site installation cost. NYSDOT adopted the placement; estimated 18% annual saving on winter-maintenance labor and material.</li>
+              <li>Built and maintained the group's SQL and MongoDB stores for multi-instrument satellite, radar, and model observations. Wrote the computer-vision front-detection algorithm used in two NASA diagnostic-tool components.</li>
+              <li>Built a hurricane-intensity model that reached R² = 0.9 by combining satellite humidity profiles with NOAA hurricane-hunter reconnaissance data.</li>
             </ul>
-          </div>
-        </div>
+          </article>
 
-        <div class="work-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="work2">Summer Intern - JPL, NASA (06/2018 - 08/2018)</h2>
-          <div id="work2" class="work-content mt-2 pl-4 border-l-2 border-accent/50">
-            <h3 class="text-lg text-primary">Jet Propulsion Laboratory, NASA, Pasadena, CA</h3>
-            <ul class="text-sm text-primary/80 italic list-disc pl-4 space-y-1">
-              <li>Estimating height dependant entrainment rate using satellite observations.</li>
-              <li>Applied a bayesian approach to constrain a single plume model with CloudSat, AIRS/AMSU and TES/MLS observations.</li>
-              <li>Compared entrainment rate profiles with Global Circulation Model outputs.</li>
+          <!-- JPL -->
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3 class="role-title">Data Science Intern</h3>
+                <p class="role-org">Jet Propulsion Laboratory, NASA</p>
+              </div>
+              <div class="role-meta">
+                <span>May 2018 — Sep 2018</span>
+                <span class="text-muted/70">Pasadena, CA</span>
+              </div>
+            </div>
+            <ul class="role-list">
+              <li>Built a Bayesian estimator that combined satellite infrared and microwave observations with a physics-based convection model to retrieve cloud vertical-velocity profiles. RMSE against ground-truth radar measurements fell 28%.</li>
+              <li>Used random-forest feature importance to isolate the two observed quantities carrying most of the signal, directing the modeling team toward a smaller and more defensible feature set.</li>
             </ul>
-          </div>
-        </div>
+          </article>
 
-        <div class="work-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="work3">Research Associate - Columbia University (12/2015 - 01/2018)</h2>
-          <div id="work3" class="work-content mt-2 pl-4 border-l-2 border-accent/50">
-            <h3 class="text-lg text-primary">Lamont-Doherty Earth Observatory, Columbia University</h3>
-            <ul class="text-sm text-primary/80 italic list-disc pl-4 space-y-1">
-              <li>Rigorous testing and sensitivity analysis of a regional climate model (MAR). Comparison of MAR model with RACMO, GLASS.</li>
-              <li>Currently working on a project to calibrate AMSR-E, SSMI-S and AMSR-2 data.</li>
-              <li>Changed the original SWE retrieval algorithm to use AMSR-2 satellite data instead of AMSR-E.</li>
-              <li>Modified SWE retrieval algorithm using dynamic snow density masks for different months.</li>
-              <li>In charge of administering servers for the group.</li>
-              <li>Presenter at Annual AMSR-E Meeting, Huntsville Alabama (2015) and SNOWPEX meeting, Boulder, Colorado (2015).</li>
+          <!-- Columbia -->
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3 class="role-title">Data Scientist</h3>
+                <p class="role-org">Lamont-Doherty Earth Observatory, Columbia University</p>
+              </div>
+              <div class="role-meta">
+                <span>Sep 2015 — May 2018</span>
+                <span class="text-muted/70">New York, NY</span>
+              </div>
+            </div>
+            <ul class="role-list">
+              <li>Lead programmer on NASA's operational Snow Water Equivalent retrieval. Replaced static grain-size and density inputs with a neural-network grain-size estimator and dynamic density maps: SWE correlation against ground stations improved 25%, snow-temperature RMSE dropped 30%.</li>
+              <li>Rewrote the snow-retrieval pipeline to read from a replacement satellite sensor after the primary instrument failed mid-mission, including the cross-instrument calibration needed to keep the multi-decade climate record continuous.</li>
+              <li>Ran sensitivity analyses on regional climate models over Greenland and identified the persistent atmospheric ridge responsible for 2015's record poleward shift in melt, albedo, and surface temperature.</li>
             </ul>
-          </div>
-        </div>
+          </article>
 
-        <div class="work-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="work4">Lab technician - CCNY (06/2006 - 08/2010)</h2>
-          <div id="work4" class="work-content mt-2 pl-4 border-l-2 border-accent/50">
-            <h3 class="text-lg text-primary">The City College of New York, CUNY, New York</h3>
-            <ul class="text-sm text-primary/80 italic list-disc pl-4 space-y-1">
-              <li>Connecting student's and faculty's computer to the campus network, ensuring the availability and reliability of network performance.</li>
-              <li>Troubleshoot and maintain desktop machines: install critical security patches and service packs to eliminate worms and viruses.</li>
-              <li>Data entry and debugging the Student Information databases.</li>
+          <!-- Lab Technician -->
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3 class="role-title">IT / Lab Technician</h3>
+                <p class="role-org">The City College of New York</p>
+              </div>
+              <div class="role-meta">
+                <span>Jun 2006 — Aug 2010</span>
+                <span class="text-muted/70">New York, NY</span>
+              </div>
+            </div>
+            <ul class="role-list">
+              <li>Administered campus network connectivity and desktop systems for students and faculty; applied security patches and kept performance reliable.</li>
+              <li>Handled data entry for and debugged the student-information database.</li>
             </ul>
-          </div>
-        </div>
+          </article>
 
-        <div class="work-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="work5">Site Supervisor & Software Developer - Navi Development (01/2004 - 06/2005)</h2>
-          <div id="work5" class="work-content mt-2 pl-4 border-l-2 border-accent/50">
-            <h3 class="text-lg text-primary">Navi Development (PVT) Ltd., Sri Lanka</h3>
-            <ul class="text-sm text-primary/80 italic list-disc pl-4 space-y-1">
-              <li>Supervised site of 40 construction workers, in building of residential properties.</li>
-              <li>Was awarded the best supervisor among 4 construction sites.</li>
-              <li>Maintained progress charts of site and created daily reports for management.</li>
-              <li>Handled payments and wages.</li>
-              <li>Developed computerized payroll system using Microsoft Access, and reduced three work days for processing monthly pays.</li>
+          <!-- Navi Development -->
+          <article class="role">
+            <div class="role-head">
+              <div>
+                <h3 class="role-title">Software Developer &amp; Site Supervisor</h3>
+                <p class="role-org">Navi Development (Pvt) Ltd.</p>
+              </div>
+              <div class="role-meta">
+                <span>Jan 2004 — Jun 2005</span>
+                <span class="text-muted/70">Sri Lanka</span>
+              </div>
+            </div>
+            <ul class="role-list">
+              <li>Built a computerized payroll system in Microsoft Access that cut monthly payroll processing by three working days.</li>
+              <li>Supervised a 40-person residential construction site — progress tracking, daily management reporting, and payroll — and was recognized as best supervisor across four sites.</li>
             </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section">
+      <div class="max-w-5xl mx-auto px-5">
+        <p class="kicker">02 — Projects</p>
+        <h2 class="section-title">Things I've built on my own time</h2>
+        <p class="section-lead">Private builds — written up here as case studies rather than repos.</p>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-5">
+
+          <!-- CinchCourt -->
+          <article class="card">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="text-xl font-bold tracking-tight">CinchCourt</h3>
+              <span class="font-mono text-xs text-muted whitespace-nowrap">2025</span>
+            </div>
+            <p class="text-sm text-accentsoft/90 mt-1">Co-Founder · competitive matchmaking &amp; rating platform</p>
+            <ul class="role-list mt-4">
+              <li>Built a trust-weighted Bayesian consensus that reconciles up to four conflicting reporter submissions per match into one confidence-weighted score, with per-reporter trust adapting from historical accuracy — so noisier matches move ratings proportionally less.</li>
+              <li>Cut matchmaking candidate evaluation from a brute-force O(N⁴) team enumeration to ~O(N·K³) by sorting players on rating and binary-searching a viable rating window, then scoring on team balance, rating spread, and wait time.</li>
+              <li>Designed the analytics warehouse around a denormalized match-history fact table for low-latency leaderboard reads, with per-park materialized views feeding the dashboards.</li>
+            </ul>
+            <div class="tags mt-5">
+              <span class="tag">Python</span><span class="tag">Bayesian inference</span><span class="tag">Algorithms</span><span class="tag">PostgreSQL</span><span class="tag">Analytics warehouse</span>
+            </div>
+          </article>
+
+          <!-- Playable Weather -->
+          <article class="card">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="text-xl font-bold tracking-tight">Playable Weather</h3>
+              <span class="font-mono text-xs text-muted whitespace-nowrap">2024 — 2025</span>
+            </div>
+            <p class="text-sm text-accentsoft/90 mt-1">Solo · multi-source weather &amp; geospatial pipeline</p>
+            <ul class="role-list mt-4">
+              <li>Built a scraper that assembles a complete metro-area pickleball-court inventory by recursively partitioning the search area into smaller bounding boxes to stay within per-query caps, with polite rate-limiting and idempotent snapshots for safe retries.</li>
+              <li>Cut hourly pipeline runtime from minutes to seconds: batched weather API calls into multi-location requests, de-duplicated forecasts when courts shared a grid cell, and cached slow location-to-grid lookups.</li>
+              <li>Engineered features with no public equivalent from raw OpenStreetMap geometry — court orientation from each polygon's long axis, surface roughness from land-use tags, and an 8-direction shelter score from nearby tree and building footprints.</li>
+              <li>Combined seven environmental sub-scores into a single playability index using a worst-factor-capped weighted average, so one bad factor still drops the score.</li>
+            </ul>
+            <div class="tags mt-5">
+              <span class="tag">Python</span><span class="tag">Geospatial</span><span class="tag">OpenStreetMap</span><span class="tag">ETL</span><span class="tag">APIs</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section">
+      <div class="max-w-5xl mx-auto px-5">
+        <p class="kicker">03 — Skills</p>
+        <h2 class="section-title">Toolbox</h2>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="card">
+            <h3 class="skill-h">Languages</h3>
+            <div class="tags mt-3"><span class="tag">Python <em>(primary)</em></span><span class="tag">SQL</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">C/C++</span><span class="tag">MATLAB</span><span class="tag">Shell</span></div>
+          </div>
+          <div class="card">
+            <h3 class="skill-h">Data stores</h3>
+            <div class="tags mt-3"><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">Redis Streams</span><span class="tag">SQLite</span></div>
+          </div>
+          <div class="card">
+            <h3 class="skill-h">Orchestration &amp; infra</h3>
+            <div class="tags mt-3"><span class="tag">Airflow</span><span class="tag">Dagster</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Nginx</span></div>
+          </div>
+          <div class="card">
+            <h3 class="skill-h">Cloud</h3>
+            <div class="tags mt-3"><span class="tag">AWS</span><span class="tag">GCP</span></div>
+          </div>
+          <div class="card sm:col-span-2">
+            <h3 class="skill-h">Methods</h3>
+            <div class="tags mt-3"><span class="tag">Statistical analysis</span><span class="tag">Bayesian methods</span><span class="tag">Neural networks</span><span class="tag">Computer vision</span><span class="tag">Async &amp; parallel processing</span></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Page -->
-  <section id="contact" class="page min-h-screen relative hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('images/contact.webp');"></div>
-    <div class="relative z-10 pt-32 pb-16 px-4 max-w-4xl mx-auto">
-      <h1 class="text-3xl md:text-4xl text-primary font-display text-center mb-12 animate-slide-in">CONTACT ME</h1>
+    <!-- ===================== RESEARCH ===================== -->
+    <section id="research" class="section">
+      <div class="max-w-5xl mx-auto px-5">
+        <p class="kicker">04 — Research</p>
+        <h2 class="section-title">The domain depth behind the data</h2>
+        <p class="section-lead">A decade of peer-reviewed atmospheric &amp; climate science — the instinct for what unfamiliar observational data actually means.</p>
 
-      <div class="text-center">
-        <h2 class="text-xl text-accent font-bold mb-6">SOCIAL MEDIA</h2>
-        <div class="flex justify-center gap-4">
-          <a href="https://www.facebook.com/JeyaJeya" target="_blank" rel="noopener" class="w-12 h-12 bg-primary/20 hover:bg-accent rounded-full flex items-center justify-center transition-all">
-            <svg class="w-6 h-6 fill-primary" viewBox="0 0 24 24"><path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5L14.17.5C10.24.5,9.25,3.11,9.25,5.32v2.15H6v4h3.25V22h5.25V11.5h3.54Z"/></svg>
-          </a>
-          <a href="https://www.twitter.com/Monk_JJ" target="_blank" rel="noopener" class="w-12 h-12 bg-primary/20 hover:bg-accent rounded-full flex items-center justify-center transition-all">
-            <svg class="w-6 h-6 fill-primary" viewBox="0 0 24 24"><path d="M23.32,6.44c-.86.38-1.78.64-2.75.76,1-.59,1.76-1.53,2.12-2.64-.93.55-1.96.95-3.06,1.17-.88-.94-2.13-1.52-3.51-1.52-2.66,0-4.81,2.16-4.81,4.81,0,.38.04.75.13,1.1-4-.2-7.55-2.12-9.93-5.04-.41.71-.65,1.53-.65,2.42,0,1.67.85,3.14,2.14,4-.79-.02-1.53-.24-2.18-.6v.06c0,2.33,1.66,4.27,3.86,4.71-.4.11-.83.17-1.27.17-.31,0-.61-.03-.91-.08.62,1.92,2.41,3.32,4.53,3.36-1.66,1.3-3.75,2.08-6.03,2.08-.39,0-.78-.02-1.16-.07,2.15,1.38,4.7,2.18,7.44,2.18,8.93,0,13.81-7.4,13.81-13.81,0-.21,0-.42-.01-.63.95-.68,1.77-1.54,2.43-2.51Z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/jeyavinoth-jeyaratnam-78b6674" target="_blank" rel="noopener" class="w-12 h-12 bg-primary/20 hover:bg-accent rounded-full flex items-center justify-center transition-all">
-            <svg class="w-6 h-6 fill-primary" viewBox="0 0 24 24"><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M9,17H6.5v-7H9V17z M7.7,8.7c-0.8,0-1.3-0.5-1.3-1.2s0.5-1.2,1.4-1.2c0.8,0,1.3,0.5,1.3,1.2S8.6,8.7,7.7,8.7z M18,17h-2.4v-3.8c0-1.1-0.7-1.3-0.9-1.3s-1.1,0.2-1.1,1.3c0,0.2,0,3.8,0,3.8h-2.5v-7h2.5v1c0.3-0.6,1-1,2.2-1s2.2,1,2.2,3.2V17z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/jeya_vinoth" target="_blank" rel="noopener" class="w-12 h-12 bg-primary/20 hover:bg-accent rounded-full flex items-center justify-center transition-all">
-            <svg class="w-6 h-6 fill-primary" viewBox="0 0 24 24"><path d="M12,2.16c3.2,0,3.58.01,4.85.07,3.25.15,4.77,1.69,4.92,4.92.06,1.27.07,1.65.07,4.85s-.01,3.58-.07,4.85c-.15,3.23-1.66,4.77-4.92,4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38,3.92,3.9,2.38,7.15,2.23,8.42,2.17,8.8,2.16,12,2.16ZM12,0C8.74,0,8.33.01,7.05.07,2.7.27.27,2.69.07,7.05.01,8.33,0,8.74,0,12s.01,3.67.07,4.95c.2,4.36,2.62,6.78,6.98,6.98,1.28.06,1.69.07,4.95.07s3.67-.01,4.95-.07c4.35-.2,6.78-2.62,6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01,15.26,0,12,0Zm0,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,18.41,4.15Z"/></svg>
-          </a>
+        <!-- Carousel -->
+        <div class="mt-12 relative">
+          <div class="research-viewport">
+            <figure class="research-slide is-active" data-index="0">
+              <img src="images/nexrad.webp" alt="NEXRAD radar study of extratropical cyclones" class="research-img" loading="lazy">
+              <figcaption class="research-cap">
+                <h3 class="research-cap-title">NEXRAD — Convection in extratropical cyclones <span class="research-cap-date">2016 — 2022</span></h3>
+                <p>Comparing metrics for identifying convection within extratropical cyclones and quantifying convection's contribution to total cyclone precipitation, using ground-based radar, GPM and Stage-IV datasets.</p>
+              </figcaption>
+            </figure>
+            <figure class="research-slide" data-index="1" hidden>
+              <img src="images/swe_research.webp" alt="Snow Water Equivalent retrieval algorithm" class="research-img" loading="lazy">
+              <figcaption class="research-cap">
+                <h3 class="research-cap-title">Snow Water Equivalent retrieval <span class="research-cap-date">2013 — 2018</span></h3>
+                <p>A new operational SWE algorithm on historical AMSR-E data combining climatology, electromagnetic modeling, and neural networks for grain-size and density estimation.</p>
+              </figcaption>
+            </figure>
+            <figure class="research-slide" data-index="2" hidden>
+              <img src="images/vv.webp" alt="Convective vertical velocity from satellite IR" class="research-img" loading="lazy">
+              <figcaption class="research-cap">
+                <h3 class="research-cap-title">Convective vertical velocity <span class="research-cap-date">2013 — 2014</span></h3>
+                <p>Derived convective vertical velocity from time-delayed IR measurements (MODIS, IIR). Velocities cluster around 2–4 m/s with long positively-skewed tails; daytime land convection runs faster.</p>
+              </figcaption>
+            </figure>
+            <figure class="research-slide" data-index="3" hidden>
+              <img src="images/ssmt2.webp" alt="SSM/T2 satellite inter-calibration" class="research-img" loading="lazy">
+              <figcaption class="research-cap">
+                <h3 class="research-cap-title">SSM/T2 inter-calibration <span class="research-cap-date">2010 — 2014</span></h3>
+                <p>Inter-calibrated the SSM/T2 satellite series using zonal averages, natural-target location, and simultaneous nadir overpasses, with F14 as the base for data availability and overlap.</p>
+              </figcaption>
+            </figure>
+            <figure class="research-slide" data-index="4" hidden>
+              <img src="images/dot.webp" alt="Roadside weather information system network" class="research-img" loading="lazy">
+              <figcaption class="research-cap">
+                <h3 class="research-cap-title">Statewide RWIS sensor network <span class="research-cap-date">2014</span></h3>
+                <p>Designed a statewide Road Weather Information System deployment plan supporting NYSDOT operations and future MDSS applications — adopted placement, with estimated winter-maintenance savings.</p>
+              </figcaption>
+            </figure>
+            <figure class="research-slide" data-index="5" hidden>
+              <img src="images/mar.webp" alt="MAR regional climate model over the ice sheets" class="research-img" loading="lazy">
+              <figcaption class="research-cap">
+                <h3 class="research-cap-title">MAR regional climate model <span class="research-cap-date">2014 — 2018</span></h3>
+                <p>Sensitivity analysis of the MAR regional climate model against RACMO and satellite outputs, running MAR with MERRA-2 reanalysis over the Himalayas, Antarctica, and Greenland.</p>
+              </figcaption>
+            </figure>
+            <figure class="research-slide" data-index="6" hidden>
+              <img src="images/hurricane.webp" alt="Hurricane intensity prediction model" class="research-img" loading="lazy">
+              <figcaption class="research-cap">
+                <h3 class="research-cap-title">Hurricane-intensity model <span class="research-cap-date">2009 — 2010</span></h3>
+                <p>Predicting hurricane intensity from Moist Static Energy and NOAA hurricane-hunter reconnaissance data, following Kerry Emanuel's potential-intensity method.</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <button id="prev-slide" class="research-nav left-2" aria-label="Previous research project">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="next-slide" class="research-nav right-2" aria-label="Next research project">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+
+          <div class="flex justify-center flex-wrap gap-2 mt-5">
+            <img src="images/nexrad_small.webp" alt="Show NEXRAD project" class="research-thumb is-active" data-index="0" loading="lazy">
+            <img src="images/swe_small.webp" alt="Show Snow Water Equivalent project" class="research-thumb" data-index="1" loading="lazy">
+            <img src="images/vv_small.webp" alt="Show vertical velocity project" class="research-thumb" data-index="2" loading="lazy">
+            <img src="images/ssmt2_small.webp" alt="Show SSM/T2 calibration project" class="research-thumb" data-index="3" loading="lazy">
+            <img src="images/dot_small.webp" alt="Show RWIS network project" class="research-thumb" data-index="4" loading="lazy">
+            <img src="images/mar_small.webp" alt="Show MAR model project" class="research-thumb" data-index="5" loading="lazy">
+            <img src="images/hurricane_small.webp" alt="Show hurricane-intensity project" class="research-thumb" data-index="6" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Publications -->
+        <div id="publications" class="mt-20 scroll-mt-24">
+          <h3 class="text-2xl font-bold tracking-tight">Selected publications</h3>
+          <p class="section-lead">First-author work in <em>Geophysical Research Letters</em>; co-author in <em>Nature Communications</em>, <em>Journal of Climate</em>, and <em>PNAS</em>.</p>
+
+          <ol class="mt-8 space-y-5">
+            <li class="pub">
+              <span class="pub-date">Feb 2020</span>
+              <div>
+                <a class="pub-title" href="https://doi.org/10.1029/2019GL086620" target="_blank" rel="noopener">Upright convection in extratropical cyclones: A survey using ground-based radar data over the United States</a>
+                <p class="pub-meta"><b>J. Jeyaratnam</b>, J. F. Booth, C. M. Naud, Z. J. Luo, C. R. Homeyer · <em>Geophysical Research Letters</em>, 47, e2019GL086620</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Jan 2020</span>
+              <div>
+                <a class="pub-title" href="https://doi.org/10.1175/JCLI-D-19-0369.1" target="_blank" rel="noopener">Evaluation of Modeled Precipitation in Oceanic Extratropical Cyclones Using IMERG</a>
+                <p class="pub-meta">C. M. Naud, <b>J. Jeyaratnam</b>, J. F. Booth, M. Zhao, A. Gettelman · <em>J. Climate</em>, 33, 95–113</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Oct 2019</span>
+              <div>
+                <a class="pub-title" href="https://doi.org/10.1175/JCLI-D-19-0421.1" target="_blank" rel="noopener">Extratropical Cyclone Clouds in the GFDL Climate Model: Diagnosing Biases</a>
+                <p class="pub-meta">C. M. Naud, J. F. Booth, <b>J. Jeyaratnam</b>, et al. · <em>J. Climate</em>, 32, 6685–6701</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Aug 2018</span>
+              <div>
+                <a class="pub-title" href="https://doi.org/10.1029/2018GL078977" target="_blank" rel="noopener">Extratropical Cyclone Precipitation Life Cycles: A Satellite-Based Analysis</a>
+                <p class="pub-meta">J. F. Booth, C. M. Naud, <b>J. Jeyaratnam</b> · <em>Geophysical Research Letters</em></p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Oct 2017</span>
+              <div>
+                <a class="pub-title" href="https://doi.org/10.1073/pnas.1707743114" target="_blank" rel="noopener">Direct measurements of meltwater runoff on the Greenland ice sheet surface</a>
+                <p class="pub-meta">L. Smith, K. Yang, L. H. Pitcher, et al., M. Tedesco, <b>J. Jeyaratnam</b>, et al. · <em>PNAS</em>, 114(50)</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Dec 2016</span>
+              <div>
+                <a class="pub-title" href="https://www.mdpi.com/2072-4292/8/12/1037" target="_blank" rel="noopener">A New Operational Snow Retrieval Algorithm Applied to Historical AMSR-E Brightness Temperatures</a>
+                <p class="pub-meta">M. Tedesco, <b>J. Jeyaratnam</b> · <em>Remote Sensing (MDPI)</em>, 8, 1037</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Jun 2016</span>
+              <div>
+                <a class="pub-title" href="https://www.nature.com/articles/ncomms11723" target="_blank" rel="noopener">Arctic cut-off high drives the poleward shift of a new Greenland melting record</a>
+                <p class="pub-meta">M. Tedesco, T. Mote, <b>J. Jeyaratnam</b>, et al. · <em>Nature Communications</em>, 7, 11723</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Mar 2016</span>
+              <div>
+                <a class="pub-title" href="https://www.the-cryosphere.net/10/477/2016/" target="_blank" rel="noopener">The darkening of the Greenland ice sheet: trends, drivers and projections (1981–2100)</a>
+                <p class="pub-meta">M. Tedesco, S. Doherty, X. Fettweis, P. Alexander, <b>J. Jeyaratnam</b>, J. Stroeve · <em>The Cryosphere</em>, 10, 477–496</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Aug 2015</span>
+              <div>
+                <a class="pub-title" href="https://ghrc.nsstc.nasa.gov/hydro/details.pl?ds=A2_DySno_NRT" target="_blank" rel="noopener">NRT AMSR2 Daily L3 Global Snow Water Equivalent EASE-Grids</a>
+                <p class="pub-meta">M. Tedesco, <b>J. Jeyaratnam</b>, R. Kelly · NASA LANCE AMSR2 at the GHRC DAAC</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Jul 2015</span>
+              <div>
+                <a class="pub-title" href="https://ieeexplore.ieee.org/document/7326711/" target="_blank" rel="noopener">An overview of the current NASA operational AMSR-E/AMSR2 snow science team activities</a>
+                <p class="pub-meta">M. Tedesco, M. Sartori, <b>J. Jeyaratnam</b> · <em>IEEE IGARSS</em>, 4037–4040</p>
+              </div>
+            </li>
+            <li class="pub">
+              <span class="pub-date">Jan 2014</span>
+              <div>
+                <a class="pub-title" href="https://onlinelibrary.wiley.com/doi/10.1002/2013GL058922/abstract" target="_blank" rel="noopener">Convective vertical velocity and cloud internal vertical structure: An A-Train perspective</a>
+                <p class="pub-meta">Z. J. Luo, <b>J. Jeyaratnam</b>, S. Iwasaki, H. Takahashi, R. Anderson · <em>Geophys. Res. Lett.</em>, 41</p>
+              </div>
+            </li>
+          </ol>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Research Page -->
-  <section id="research" class="page min-h-screen relative hidden">
-    <div class="relative z-10 pt-32 pb-16 px-4 max-w-6xl mx-auto">
-      <h1 class="text-3xl md:text-4xl text-primary font-display text-center mb-12 animate-slide-in">RESEARCH</h1>
-
-      <!-- Research Carousel -->
-      <div class="relative">
-        <div class="research-slides relative overflow-hidden">
-          <!-- Slide 1 -->
-          <div class="research-slide" data-index="0">
-            <div class="relative mx-auto max-w-3xl">
-              <img src="images/nexrad.webp" alt="Nexrad Project" class="w-full h-64 md:h-96 object-cover border-2 border-primary" loading="lazy">
-              <div class="absolute inset-0 bg-black/90 flex flex-col items-center justify-start px-12 py-4 md:p-8 overflow-y-auto">
-                <h2 class="text-xl md:text-2xl text-accent mb-4">Nexrad Project (2016 - Present)</h2>
-                <p class="text-sm md:text-base text-primary text-justify">Extratropical cyclones (ETC) are the most common cause of extreme precipitation in mid-latitudes. Vertical motion within an ETC can be driven by isentropic lifting, upright convection and slantwise convection. These different mechanisms can deliver different rain rates, might respond differently to global warming, and the profile of condensational heating associated with these different pathways impact the storms differently. In this project we compare different metrics for identifying convection within the ETCs and calculate the relative contribution of convection to total ETC precipitation.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="research-slide hidden" data-index="1">
-            <div class="relative mx-auto max-w-3xl">
-              <img src="images/swe_research.webp" alt="SWE Algorithm" class="w-full h-64 md:h-96 object-cover border-2 border-primary" loading="lazy">
-              <div class="absolute inset-0 bg-black/90 flex flex-col items-center justify-start px-12 py-4 md:p-8 overflow-y-auto">
-                <h2 class="text-xl md:text-2xl text-accent mb-4">SWE Algorithm (2013 - Present)</h2>
-                <p class="text-sm md:text-base text-primary text-justify">Snow is a key element of the water and energy cycles and the knowledge of spatio-temporal distribution of snow depth and snow water equivalent (SWE) is fundamental for hydrological and climatological applications. In this project, we develop a new operational algorithm applied to historical AMSR-E data using climatological data, electromagnetic modeling and artificial neural networks.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="research-slide hidden" data-index="2">
-            <div class="relative mx-auto max-w-3xl">
-              <img src="images/vv.webp" alt="Vertical Velocity" class="w-full h-64 md:h-96 object-cover border-2 border-primary" loading="lazy">
-              <div class="absolute inset-0 bg-black/90 flex flex-col items-center justify-start px-12 py-4 md:p-8 overflow-y-auto">
-                <h2 class="text-xl md:text-2xl text-accent mb-4">Vertical Velocity (2013 - 2014)</h2>
-                <p class="text-sm md:text-base text-primary text-justify">Convective vertical velocity is derived from time-delayed (1-2 min) IR measurements from MODIS and IIR. Convective vertical velocities are found to be clustered around 2-4 m/s but the distributions are positively skewed with long tails extending to larger values. Land convection during the 13:30 overpasses has higher vertical velocities than those during the 1:30 overpasses.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="research-slide hidden" data-index="3">
-            <div class="relative mx-auto max-w-3xl">
-              <img src="images/ssmt2.webp" alt="SSMT/2 Calibration" class="w-full h-64 md:h-96 object-cover border-2 border-primary" loading="lazy">
-              <div class="absolute inset-0 bg-black/90 flex flex-col items-center justify-start px-12 py-4 md:p-8 overflow-y-auto">
-                <h2 class="text-xl md:text-2xl text-accent mb-4">SSMT/2 Calibration (2010 - 2014)</h2>
-                <p class="text-sm md:text-base text-primary text-justify">SSM/T2 satellites are first inter-calibrated within one another using relative calibration techniques such as zonal averages, natural target location and SNO. F14 was used as the base, because of the high availability of data and the overlap over all satellites.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="research-slide hidden" data-index="4">
-            <div class="relative mx-auto max-w-3xl">
-              <img src="images/dot.webp" alt="DOT RWIS Network" class="w-full h-64 md:h-96 object-cover border-2 border-primary" loading="lazy">
-              <div class="absolute inset-0 bg-black/90 flex flex-col items-center justify-start px-12 py-4 md:p-8 overflow-y-auto">
-                <h2 class="text-xl md:text-2xl text-accent mb-4">Department of Transportation RWIS Network (2014)</h2>
-                <p class="text-sm md:text-base text-primary text-justify">The objective of this project was to develop a plan for deploying a statewide RWIS to support both current NYSDOT operations and future MDSS applications. The recommended RWIS network shall provide and monitor timely road weather condition for decision making by road maintenance agencies.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 6 -->
-          <div class="research-slide hidden" data-index="5">
-            <div class="relative mx-auto max-w-3xl">
-              <img src="images/mar.webp" alt="MAR Model" class="w-full h-64 md:h-96 object-cover border-2 border-primary" loading="lazy">
-              <div class="absolute inset-0 bg-black/90 flex flex-col items-center justify-start px-12 py-4 md:p-8 overflow-y-auto">
-                <h2 class="text-xl md:text-2xl text-accent mb-4">Modele Atmospherique Regional (MAR) (2014 - Present)</h2>
-                <p class="text-sm md:text-base text-primary text-justify">In this study, we compare MAR outputs with other model outputs from RACMO and satellite outputs. I was involved in the modification of running MAR with MERRA2 reanalysis data over Himalayas, Antarctica and Greenland.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 7 -->
-          <div class="research-slide hidden" data-index="6">
-            <div class="relative mx-auto max-w-3xl">
-              <img src="images/hurricane.webp" alt="Hurricane Study" class="w-full h-64 md:h-96 object-cover border-2 border-primary" loading="lazy">
-              <div class="absolute inset-0 bg-black/90 flex flex-col items-center justify-start px-12 py-4 md:p-8 overflow-y-auto">
-                <h2 class="text-xl md:text-2xl text-accent mb-4">Study of Hurricane Intensity (2009 - 2010)</h2>
-                <p class="text-sm md:text-base text-primary text-justify">In this study, we try to predict the hurricane intensity by using the Moist Static Energy to estimate wind speeds, using Dr. Kerry Emanuel's method. We use data collected by NOAA hurricane hunters (reconnaissance data).</p>
-              </div>
-            </div>
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section">
+      <div class="max-w-5xl mx-auto px-5 grid md:grid-cols-[1.4fr_1fr] gap-12">
+        <div>
+          <p class="kicker">05 — About</p>
+          <h2 class="section-title">A bit more</h2>
+          <div class="mt-6 space-y-4 text-ink/90 leading-relaxed max-w-2xl">
+            <p>I'm a senior data engineer with 10+ years spent making messy, real-world observational data usable — satellite telemetry, emissions inventories, weather signals, sensor networks, crowd-sourced reports. A lot of the job is detective work: figuring out what unfamiliar data actually means and how to represent it before anything downstream can use it.</p>
+            <p>I'm equally at home building production ingestion and the exploration tooling research teams live in day-to-day. The domain instinct comes from the academic side — I'm a PhD candidate in Earth &amp; Atmospheric Sciences, with first-author climate research along the way.</p>
+            <p class="text-muted">Outside work: basketball, hiking, and the occasional weekend data project (a couple are above).</p>
           </div>
         </div>
-
-        <!-- Navigation Buttons -->
-        <button id="prev-slide" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary text-accent rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-all z-20">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <button id="next-slide" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary text-accent rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-all z-20">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </button>
-
-        <!-- Thumbnails -->
-        <div class="flex justify-center gap-2 mt-4 overflow-x-auto py-2">
-          <img src="images/nexrad_small.webp" alt="" class="research-thumb w-16 h-12 md:w-24 md:h-16 object-cover cursor-pointer border-2 border-accent opacity-100" data-index="0" loading="lazy">
-          <img src="images/swe_small.webp" alt="" class="research-thumb w-16 h-12 md:w-24 md:h-16 object-cover cursor-pointer border-2 border-primary/50 opacity-50 hover:opacity-100" data-index="1" loading="lazy">
-          <img src="images/vv_small.webp" alt="" class="research-thumb w-16 h-12 md:w-24 md:h-16 object-cover cursor-pointer border-2 border-primary/50 opacity-50 hover:opacity-100" data-index="2" loading="lazy">
-          <img src="images/ssmt2_small.webp" alt="" class="research-thumb w-16 h-12 md:w-24 md:h-16 object-cover cursor-pointer border-2 border-primary/50 opacity-50 hover:opacity-100" data-index="3" loading="lazy">
-          <img src="images/dot_small.webp" alt="" class="research-thumb w-16 h-12 md:w-24 md:h-16 object-cover cursor-pointer border-2 border-primary/50 opacity-50 hover:opacity-100" data-index="4" loading="lazy">
-          <img src="images/mar_small.webp" alt="" class="research-thumb w-16 h-12 md:w-24 md:h-16 object-cover cursor-pointer border-2 border-primary/50 opacity-50 hover:opacity-100" data-index="5" loading="lazy">
-          <img src="images/hurricane_small.webp" alt="" class="research-thumb w-16 h-12 md:w-24 md:h-16 object-cover cursor-pointer border-2 border-primary/50 opacity-50 hover:opacity-100" data-index="6" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Page -->
-  <section id="projects" class="page min-h-screen relative hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('images/project_1.webp');"></div>
-    <div class="relative z-10 pt-32 pb-16 px-4 max-w-5xl mx-auto">
-      <h1 class="text-3xl md:text-4xl text-primary font-display text-center mb-12 animate-slide-in">PROJECTS</h1>
-
-      <!-- Desktop: Two column layout with project list on left -->
-      <div class="hidden md:grid md:grid-cols-2 gap-0">
-        <!-- Project List -->
-        <div class="text-right border-r border-primary/50 pr-4">
-          <ul class="space-y-4">
-            <li><a href="#" class="project-link text-xl text-accent hover:text-shadow-glow transition-all" data-project="0">Ad Hoc Networking (2008)</a></li>
-            <li><a href="#" class="project-link text-xl text-accent hover:text-shadow-glow transition-all" data-project="1">Network Simulations (2011)</a></li>
-            <li><a href="#" class="project-link text-xl text-accent hover:text-shadow-glow transition-all" data-project="2">USB Interface Board (2009)</a></li>
+        <div>
+          <h3 class="skill-h">Education</h3>
+          <ul class="mt-4 space-y-5">
+            <li>
+              <p class="font-semibold">PhD Candidate, Earth &amp; Atmospheric Sciences</p>
+              <p class="text-sm text-muted">The Graduate Center, CUNY · 4.0 GPA · dissertation pending (2027)</p>
+            </li>
+            <li>
+              <p class="font-semibold">M.E., Electrical Engineering</p>
+              <p class="text-sm text-muted">The City College of New York · 3.9 GPA · 2014</p>
+            </li>
+            <li>
+              <p class="font-semibold">B.E., Electrical Engineering <span class="text-accentsoft/90">(Summa Cum Laude)</span></p>
+              <p class="text-sm text-muted">The City College of New York · 3.8 GPA · 2010</p>
+            </li>
           </ul>
         </div>
+      </div>
+    </section>
 
-        <!-- Project Details -->
-        <div class="border-l border-primary/50 pl-4">
-          <div class="project-detail" data-project="0">
-            <h2 class="text-xl text-accent mb-4">Ad Hoc Networking (2008)</h2>
-            <img src="images/ad_hoc.webp" alt="Ad Hoc Networking" class="w-48 h-48 object-cover border-2 border-primary mx-auto mb-4" loading="lazy">
-            <p class="text-sm text-primary">Designed OPNET algorithm to improve quality of video transfer from one node to another via ad hoc Network, by using buffered smart nodes.</p>
-            <p class="text-sm text-primary mt-2">Created system-in-the-loop setup with multiple machines and real-life data packets to analyze bit rate, packet loss ratios and SNR.</p>
-          </div>
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section pb-28">
+      <div class="max-w-5xl mx-auto px-5">
+        <p class="kicker">06 — Contact</p>
+        <h2 class="section-title">Let's talk</h2>
+        <p class="section-lead">Open to senior data &amp; software engineering roles. The fastest ways to reach me:</p>
 
-          <div class="project-detail hidden" data-project="1">
-            <h2 class="text-xl text-accent mb-4">Network Simulations (2011)</h2>
-            <img src="images/network.webp" alt="Network Simulations" class="w-48 h-48 object-cover border-2 border-primary mx-auto mb-4" loading="lazy">
-            <p class="text-sm text-primary">Created packet switched network in OPNET using dynamic routing protocol for specified network design.</p>
-            <p class="text-sm text-primary mt-2">Simulated VOIP scenario over ad hoc Network. Built and improved performances of video transfer over a Bluetooth Mobile ad hoc Network.</p>
-          </div>
-
-          <div class="project-detail hidden" data-project="2">
-            <h2 class="text-xl text-accent mb-4">USB Interface Board (Senior Project) (2009)</h2>
-            <img src="images/senior_design.webp" alt="USB Interface Board" class="w-48 h-48 object-cover border-2 border-primary mx-auto mb-4" loading="lazy">
-            <p class="text-sm text-primary">Designed USB interface device capable of controlling actuators.</p>
-            <p class="text-sm text-primary mt-2">Scripted software patch for use with Arduino Programming Language to program PIC. Team leader of 5 holding weekly status meetings to monitor progress and resolve project obstacles.</p>
-          </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="mailto:jeyavinoth@gmail.com" class="contact-btn">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            jeyavinoth@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/jeyavinoth" target="_blank" rel="noopener" class="contact-btn">
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H6.5v-7H9v7zM7.7 8.7c-.8 0-1.3-.5-1.3-1.2s.5-1.2 1.4-1.2c.8 0 1.3.5 1.3 1.2s-.6 1.2-1.4 1.2zM18 17h-2.4v-3.8c0-1.1-.7-1.3-.9-1.3s-1.1.2-1.1 1.3V17h-2.5v-7h2.5v1c.3-.6 1-1 2.2-1s2.2 1 2.2 3.2V17z"/></svg>
+            linkedin.com/in/jeyavinoth
+          </a>
+          <a href="assets/Jeyavinoth_Jeyaratnam_Resume.pdf" target="_blank" rel="noopener" class="contact-btn">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            Download résumé
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- Mobile: All projects listed vertically like Work page -->
-      <div class="md:hidden space-y-6">
-        <div class="project-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="project0">Ad Hoc Networking (2008)</h2>
-          <div id="project0" class="mt-2 pl-4 border-l-2 border-accent/50">
-            <img src="images/ad_hoc.webp" alt="Ad Hoc Networking" class="w-32 h-32 object-cover border-2 border-primary mb-4" loading="lazy">
-            <p class="text-sm text-primary">Designed OPNET algorithm to improve quality of video transfer from one node to another via ad hoc Network, by using buffered smart nodes.</p>
-            <p class="text-sm text-primary mt-2">Created system-in-the-loop setup with multiple machines and real-life data packets to analyze bit rate, packet loss ratios and SNR.</p>
-          </div>
-        </div>
+  </main>
 
-        <div class="project-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="project1">Network Simulations (2011)</h2>
-          <div id="project1" class="mt-2 pl-4 border-l-2 border-accent/50">
-            <img src="images/network.webp" alt="Network Simulations" class="w-32 h-32 object-cover border-2 border-primary mb-4" loading="lazy">
-            <p class="text-sm text-primary">Created packet switched network in OPNET using dynamic routing protocol for specified network design.</p>
-            <p class="text-sm text-primary mt-2">Simulated VOIP scenario over ad hoc Network. Built and improved performances of video transfer over a Bluetooth Mobile ad hoc Network.</p>
-          </div>
-        </div>
-
-        <div class="project-item">
-          <h2 class="text-xl text-accent font-bold cursor-pointer hover:text-shadow-glow" data-toggle="project2">USB Interface Board (Senior Project) (2009)</h2>
-          <div id="project2" class="mt-2 pl-4 border-l-2 border-accent/50">
-            <img src="images/senior_design.webp" alt="USB Interface Board" class="w-32 h-32 object-cover border-2 border-primary mb-4" loading="lazy">
-            <p class="text-sm text-primary">Designed USB interface device capable of controlling actuators.</p>
-            <p class="text-sm text-primary mt-2">Scripted software patch for use with Arduino Programming Language to program PIC. Team leader of 5 holding weekly status meetings to monitor progress and resolve project obstacles.</p>
-          </div>
-        </div>
-      </div>
+  <footer class="border-t border-line">
+    <div class="max-w-5xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted">
+      <p>© <span id="year">2026</span> Jeyavinoth Jeyaratnam</p>
+      <p class="font-mono text-xs">Hand-built with vanilla JS — no frameworks.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- Publications Page -->
-  <section id="publications" class="page min-h-screen relative hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('images/pub2.webp');"></div>
-    <div class="relative z-10 pt-32 pb-16 px-4 max-w-4xl mx-auto">
-      <h1 class="text-3xl md:text-4xl text-primary font-display text-center mb-12 animate-slide-in">PUBLICATIONS</h1>
-
-      <!-- Timeline -->
-      <div class="relative">
-        <!-- Center line -->
-        <div class="absolute left-1/2 top-0 bottom-0 w-px border-l border-dashed border-primary"></div>
-
-        <!-- Publication Items -->
-        <div class="space-y-8">
-          <!-- 2020 Feb -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8 text-right">
-              <a href="https://doi.org/10.1029/2019GL086620" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">Upright convection in extratropical cyclones: A survey using ground-based radar data over the United States</h4>
-              </a>
-              <p class="text-sm text-primary mt-1"><u>J. Jeyaratnam</u>, J. F. Booth, C. M. Naud, Z. J. Luo and C. R. Homeyer: Geophysical Research Letters, 47, e2019GL086620</p>
-            </div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Feb</span>
-              <span class="text-xs text-accent font-bold">2020</span>
-            </div>
-            <div class="w-1/2 pl-8"></div>
-          </div>
-
-          <!-- 2020 Jan -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8"></div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Jan</span>
-              <span class="text-xs text-accent font-bold">2020</span>
-            </div>
-            <div class="w-1/2 pl-8 text-left">
-              <a href="https://doi.org/10.1175/JCLI-D-19-0369.1" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">Evaluation of Modeled Precipitation in Oceanic Extratropical Cyclones Using IMERG</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">C. M. Naud, <u>J. Jeyaratnam</u>, J. F. Booth, M. Zhao and A. Gettelman: J. Climate, 33, 95-113</p>
-            </div>
-          </div>
-
-          <!-- 2019 Oct -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8 text-right">
-              <a href="https://doi.org/10.1175/JCLI-D-19-0421.1" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">Extratropical Cyclone Clouds in the GFDL Climate Model: Diagnosing Biases</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">C. M. Naud, J.F. Booth, <u>J. Jeyaratnam</u>, et al.: J. Climate, 32, 6685-6701</p>
-            </div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Oct</span>
-              <span class="text-xs text-accent font-bold">2019</span>
-            </div>
-            <div class="w-1/2 pl-8"></div>
-          </div>
-
-          <!-- 2018 Aug -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8"></div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Aug</span>
-              <span class="text-xs text-accent font-bold">2018</span>
-            </div>
-            <div class="w-1/2 pl-8 text-left">
-              <a href="https://doi.org/10.1029/2018GL078977" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">Extratropical Cyclone Precipitation Life Cycles: A Satellite-Based Analysis</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">J. F. Booth, C. M. Naud and <u>J. Jeyaratnam</u>: Geophysical Research Letters</p>
-            </div>
-          </div>
-
-          <!-- 2017 Oct -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8 text-right">
-              <a href="https://doi.org/10.1073/pnas.1707743114" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">Direct measurements of meltwater runoff on the Greenland ice sheet surface</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">L. Smith, K. Yang, L. H. Pitcher, et al., M. Tedesco, <u>J. Jeyaratnam</u>, et al.: PNAS 114, no. 50</p>
-            </div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Oct</span>
-              <span class="text-xs text-accent font-bold">2017</span>
-            </div>
-            <div class="w-1/2 pl-8"></div>
-          </div>
-
-          <!-- 2016 Dec -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8"></div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Dec</span>
-              <span class="text-xs text-accent font-bold">2016</span>
-            </div>
-            <div class="w-1/2 pl-8 text-left">
-              <a href="https://www.mdpi.com/2072-4292/8/12/1037" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">A New Operational Snow Retrieval Algorithm Applied to Historical AMSR-E Brightness Temperatures</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">M. Tedesco, and <u>J. Jeyaratnam</u>: Remote Sensing (MDPI), 8, 1037</p>
-            </div>
-          </div>
-
-          <!-- 2016 Jun -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8 text-right">
-              <a href="https://www.nature.com/articles/ncomms11723" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">Arctic cut-off high drives the poleward shift of a new Greenland melting record</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">M. Tedesco, T. Mote, <u>J. Jeyaratnam</u>, et al.: Nature Communications, 7, 11723</p>
-            </div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Jun</span>
-              <span class="text-xs text-accent font-bold">2016</span>
-            </div>
-            <div class="w-1/2 pl-8"></div>
-          </div>
-
-          <!-- 2016 Mar -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8"></div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Mar</span>
-              <span class="text-xs text-accent font-bold">2016</span>
-            </div>
-            <div class="w-1/2 pl-8 text-left">
-              <a href="https://www.the-cryosphere.net/10/477/2016/" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">The darkening of the Greenland ice sheet: trends, drivers and projections (1981 - 2100)</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">M. Tedesco, S. Doherty, X. Fettweis, P. Alexander, <u>J. Jeyaratnam</u>, and J. Stroeve: The Cryosphere, 10, 477-496</p>
-            </div>
-          </div>
-
-          <!-- 2015 Aug -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8 text-right">
-              <a href="https://ghrc.nsstc.nasa.gov/hydro/details.pl?ds=A2_DySno_NRT" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">NRT AMSR2 Daily L3 Global Snow Water Equivalent EASE-Grids</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">M. Tedesco, <u>J. Jeyaratnam</u>, and R. Kelly: NASA LANCE AMSR2 at the GHRC DAAC</p>
-            </div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Aug</span>
-              <span class="text-xs text-accent font-bold">2015</span>
-            </div>
-            <div class="w-1/2 pl-8"></div>
-          </div>
-
-          <!-- 2015 Jul -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8"></div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Jul</span>
-              <span class="text-xs text-accent font-bold">2015</span>
-            </div>
-            <div class="w-1/2 pl-8 text-left">
-              <a href="https://ieeexplore.ieee.org/document/7326711/" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">An overview of the current NASA operational AMSR-E/AMSR2 snow science team activities</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">M. Tedesco, M. Sartori, and <u>J. Jeyaratnam</u>: IEEE IGARSS, pp. 4037-4040</p>
-            </div>
-          </div>
-
-          <!-- 2014 Jan -->
-          <div class="relative flex items-center">
-            <div class="w-1/2 pr-8 text-right">
-              <a href="https://onlinelibrary.wiley.com/doi/10.1002/2013GL058922/abstract" target="_blank" class="block hover:text-shadow-glow transition-all">
-                <h4 class="text-lg text-accent uppercase">Convective vertical velocity and cloud internal vertical structure: An A-Train perspective</h4>
-              </a>
-              <p class="text-sm text-primary mt-1">Z. J. Luo, <u>J. Jeyaratnam</u>, S. Iwasaki, H. Takahashi and R. Anderson: Geophys. Res. Letts., 41</p>
-            </div>
-            <div class="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full flex flex-col items-center justify-center z-10">
-              <span class="text-xs text-accent font-bold">Jan</span>
-              <span class="text-xs text-accent font-bold">2014</span>
-            </div>
-            <div class="w-1/2 pl-8"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vanilla JavaScript -->
   <script src="js/app.js"></script>
 </body>
 </html>
