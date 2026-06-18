@@ -18,12 +18,15 @@ header{position:sticky; top:0; z-index:20; background:rgba(251,251,248,0.92); ba
 .bar .path{color:var(--mut);}
 .bar .path b{color:var(--ink); font-weight:500;}
 nav{display:flex; flex-wrap:wrap; gap:14px;}
-nav a{color:var(--mut);}
+nav a{color:var(--mut); padding:3px 0;}
 nav a::before{content:"["; color:var(--rule);} nav a::after{content:"]"; color:var(--rule);}
 nav a:hover, nav a.active{color:var(--accent);}
 @media(max-width:680px){
   .bar{flex-direction:column; align-items:flex-start; gap:7px; padding:9px 0;}
-  nav{gap:10px 12px;}
+  nav{gap:8px 14px;}
+  nav a{padding:5px 0;}
+  .path-desc{display:none;}        /* shorter header on phones */
+  section{scroll-margin-top:108px;} /* clear the taller stacked header */
 }
 
 /* Sections (scroll-margin clears the sticky header on anchor jumps) */
@@ -78,8 +81,13 @@ ul.b li::before{content:"-"; position:absolute; left:0; color:var(--accent);}
 .pub .v{color:var(--mut); font-size:12.5px;}
 
 .contact-kv{grid-template-columns:92px 1fr; font-size:15px; gap:8px 14px;}
-.contact-kv a{border-bottom:1px solid var(--rule);}
+.contact-kv a{border-bottom:1px solid var(--rule); overflow-wrap:anywhere;}
 .contact-kv a:hover{color:var(--accent); border-color:var(--accent);}
+
+/* Mobile safety: let grid tracks shrink and long tokens (URLs, filenames) wrap
+   instead of forcing horizontal scroll on narrow screens. */
+.kv>*, .row>*, .pub>*, .skill>*{min-width:0;}
+.kv a, .pub a{overflow-wrap:anywhere;}
 
 footer{border-top:1px solid var(--ink); padding:22px 0; color:var(--mut); font-size:12.5px; display:flex; justify-content:space-between; gap:12px;}
 
